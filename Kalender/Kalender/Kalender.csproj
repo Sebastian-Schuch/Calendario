@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LollipoUi">
+      <HintPath>..\..\..\..\..\Downloads\LollipoUi\LollipoUi.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\..\..\..\Projek_Joni_Michi\Lernkartei\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -65,6 +71,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +85,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bilder\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bilder\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bilder\menu-symbol-of-three-parallel-lines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bilder\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bilder\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bilder\icon %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
