@@ -38,7 +38,7 @@ namespace Kalender
             basicDesigns();
             combineForms();
         }
-        
+
         //ColorScheme
         internal Color bunt1 = Color.FromArgb(95, 174, 87);
         internal Color grauDunkel1 = ColorTranslator.FromHtml("#313131");
@@ -61,7 +61,8 @@ namespace Kalender
             minimizeNav();
 
         }
-        main frmain;
+
+        private main frmain;
         private Panel panMain1 = new Panel();
         private void combineForms()
         {
@@ -74,8 +75,8 @@ namespace Kalender
             sideNav.BringToFront();
             panMain1.Controls.Add(frmain);
             frmain.Show();
-            
-            
+
+
         }
 
 
@@ -181,7 +182,7 @@ namespace Kalender
         {
 
             frmain.ChangeTab("tag");
-            
+
         }
 
         private void PanWoche_Click(object sender, EventArgs e)
