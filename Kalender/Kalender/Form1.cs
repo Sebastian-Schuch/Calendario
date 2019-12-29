@@ -36,16 +36,20 @@ namespace Kalender
         private void Form1_Load(object sender, EventArgs e)
         {
             basicDesigns();
+            combineForms();
         }
 
         //ColorScheme
-        private Color bunt1 = Color.FromArgb(95, 174, 87);
-        private Color grauDunkel1 = ColorTranslator.FromHtml("#313131");
-        private Color grauDunkel2 = ColorTranslator.FromHtml("#252525");
-        private Color grauHell1 = ColorTranslator.FromHtml("#525252");
-        private Color grauMittel = ColorTranslator.FromHtml("#414141");
-        private Color Hauptfarbe1 = ColorTranslator.FromHtml("#ca3e47");
-        private Color HeaderGrau = ColorTranslator.FromHtml("#202225");
+        internal Color bunt1 = Color.FromArgb(95, 174, 87);
+        internal Color grauDunkel1 = ColorTranslator.FromHtml("#313131");
+        internal Color grauDunkel2 = ColorTranslator.FromHtml("#252525");
+        internal Color grauHell1 = ColorTranslator.FromHtml("#525252");
+        internal Color grauMittel = ColorTranslator.FromHtml("#414141");
+        internal Color Hauptfarbe1 = ColorTranslator.FromHtml("#ca3e47");
+        internal Color HeaderGrau = ColorTranslator.FromHtml("#202225");
+
+
+
 
         private void basicDesigns()
         {
@@ -58,24 +62,29 @@ namespace Kalender
 
         }
 
-
-        private void label1_Click(object sender, EventArgs e)
+        private Panel panMain1 = new Panel();
+        private void combineForms()
         {
 
+            this.Controls.Add(panMain1);
+            panMain1.Size = new Size(1004, 764);
+            panMain1.Location = new Point(54, 36);
+
+            main frmain = new main() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            sideNav.BringToFront();
+            panMain1.Controls.Add(frmain);
+            frmain.Show();
+
+
         }
+
+
 
         private void pbExit_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
         }
 
-        private void pbSideMenu1_Click(object sender, EventArgs e)
-        {
-
-
-
-            //sideNav.Visible = false;
-        }
 
         private void pbSideMenu1_Click_1(object sender, EventArgs e)
         {
@@ -114,7 +123,7 @@ namespace Kalender
 
 
         //Dragable Header
-        bool mouseDown = false;
+        private bool mouseDown = false;
         private Point lastLocation;
 
         private void PanHeader_MouseDown(object sender, MouseEventArgs e)
@@ -154,6 +163,35 @@ namespace Kalender
         private void MinimizeBtn_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        //SideNav verlinken
+
+        private void tabVeraendern(string tabname)
+        {
+
+        }
+
+        private void panTermin_Click(object sender, EventArgs e)
+        {
+            panMain1.Controls.Clear();
+            main frmain = new main() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmain.tabControlMain.SelectedTab = frmain.tabTerminuebersicht;
+            sideNav.BringToFront();
+            panMain1.Controls.Add(frmain);
+            frmain.Show();
+
+        }
+
+        private void panTag_Click(object sender, EventArgs e)
+        {
+            panMain1.Controls.Clear();
+
+            main frmain = new main() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmain.tabControlMain.SelectedTab = frmain.tabTag;
+            sideNav.BringToFront();
+            panMain1.Controls.Add(frmain);
+            frmain.Show();
         }
     }
 
