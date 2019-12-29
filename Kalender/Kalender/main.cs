@@ -20,12 +20,10 @@ namespace Kalender
 
         private void main_Load(object sender, EventArgs e)
         {
-
             design();
-
-            
         }
-        internal void ChangeTab(string tab) {
+        internal void ChangeTab(string tab)
+        {
 
             if (tab.Equals("uebersicht"))
             {
