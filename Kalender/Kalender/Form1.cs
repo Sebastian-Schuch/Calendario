@@ -68,7 +68,7 @@ namespace Kalender
         {
 
             this.Controls.Add(panMain1);
-            panMain1.Size = new Size(1004, 764);
+            panMain1.Size = new Size(1006, 764);
             panMain1.Location = new Point(54, 36);
 
             frmain = new main() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
