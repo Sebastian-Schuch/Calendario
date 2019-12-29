@@ -176,28 +176,33 @@ namespace Kalender
         private void panTermin_Click(object sender, EventArgs e)
         {
             frmain.ChangeTab("uebersicht");
+            minimizeNav();
         }
 
         private void panTag_Click(object sender, EventArgs e)
         {
 
             frmain.ChangeTab("tag");
+            minimizeNav();
 
         }
 
         private void PanWoche_Click(object sender, EventArgs e)
         {
             frmain.ChangeTab("woche");
+            minimizeNav();
         }
 
         private void PanMonat_Click(object sender, EventArgs e)
         {
             frmain.ChangeTab("monat");
+            minimizeNav();
         }
 
         private void PanSuche_Click(object sender, EventArgs e)
         {
             frmain.ChangeTab("suche");
+            minimizeNav();
         }
     }
 
