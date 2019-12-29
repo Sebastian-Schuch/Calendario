@@ -38,7 +38,7 @@ namespace Kalender
             basicDesigns();
             combineForms();
         }
-
+        
         //ColorScheme
         internal Color bunt1 = Color.FromArgb(95, 174, 87);
         internal Color grauDunkel1 = ColorTranslator.FromHtml("#313131");
@@ -61,7 +61,7 @@ namespace Kalender
             minimizeNav();
 
         }
-
+        main frmain;
         private Panel panMain1 = new Panel();
         private void combineForms()
         {
@@ -70,12 +70,12 @@ namespace Kalender
             panMain1.Size = new Size(1004, 764);
             panMain1.Location = new Point(54, 36);
 
-            main frmain = new main() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmain = new main() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             sideNav.BringToFront();
             panMain1.Controls.Add(frmain);
             frmain.Show();
-
-
+            
+            
         }
 
 
@@ -174,24 +174,29 @@ namespace Kalender
 
         private void panTermin_Click(object sender, EventArgs e)
         {
-            panMain1.Controls.Clear();
-            main frmain = new main() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            frmain.tabControlMain.SelectedTab = frmain.tabTerminuebersicht;
-            sideNav.BringToFront();
-            panMain1.Controls.Add(frmain);
-            frmain.Show();
-
+            frmain.ChangeTab("uebersicht");
         }
 
         private void panTag_Click(object sender, EventArgs e)
         {
-            panMain1.Controls.Clear();
 
-            main frmain = new main() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            frmain.tabControlMain.SelectedTab = frmain.tabTag;
-            sideNav.BringToFront();
-            panMain1.Controls.Add(frmain);
-            frmain.Show();
+            frmain.ChangeTab("tag");
+            
+        }
+
+        private void PanWoche_Click(object sender, EventArgs e)
+        {
+            frmain.ChangeTab("woche");
+        }
+
+        private void PanMonat_Click(object sender, EventArgs e)
+        {
+            frmain.ChangeTab("monat");
+        }
+
+        private void PanSuche_Click(object sender, EventArgs e)
+        {
+            frmain.ChangeTab("suche");
         }
     }
 

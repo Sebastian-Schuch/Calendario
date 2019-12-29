@@ -23,8 +23,33 @@ namespace Kalender
 
             design();
 
+            
         }
+        internal void ChangeTab(string tab) {
 
+            if (tab.Equals("uebersicht"))
+            {
+                tabControlMain.SelectedTab = tabTerminuebersicht;
+            }
+            else if (tab.Equals("tag"))
+            {
+                tabControlMain.SelectedTab = tabTag;
+            }
+            else if (tab.Equals("woche"))
+            {
+                tabControlMain.SelectedTab = tabWoche;
+            }
+            else if (tab.Equals("monat"))
+            {
+                tabControlMain.SelectedTab = tabMonat;
+            }
+            else if (tab.Equals("suche"))
+            {
+                tabControlMain.SelectedTab = tabSuche;
+            }
+            this.Update();
+
+        }
         private void design()
         {
             TabControl.TabPageCollection pages = tabControlMain.TabPages;

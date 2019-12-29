@@ -79,7 +79,7 @@
             this.tabTag.Location = new System.Drawing.Point(4, 22);
             this.tabTag.Name = "tabTag";
             this.tabTag.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTag.Size = new System.Drawing.Size(996, 738);
+            this.tabTag.Size = new System.Drawing.Size(948, 738);
             this.tabTag.TabIndex = 1;
             this.tabTag.Text = "Tag";
             this.tabTag.UseVisualStyleBackColor = true;
@@ -88,7 +88,7 @@
             // 
             this.tabWoche.Location = new System.Drawing.Point(4, 22);
             this.tabWoche.Name = "tabWoche";
-            this.tabWoche.Size = new System.Drawing.Size(996, 738);
+            this.tabWoche.Size = new System.Drawing.Size(948, 738);
             this.tabWoche.TabIndex = 2;
             this.tabWoche.Text = "Woche";
             this.tabWoche.UseVisualStyleBackColor = true;
@@ -97,7 +97,7 @@
             // 
             this.tabMonat.Location = new System.Drawing.Point(4, 22);
             this.tabMonat.Name = "tabMonat";
-            this.tabMonat.Size = new System.Drawing.Size(996, 738);
+            this.tabMonat.Size = new System.Drawing.Size(948, 738);
             this.tabMonat.TabIndex = 3;
             this.tabMonat.Text = "Monat";
             this.tabMonat.UseVisualStyleBackColor = true;
@@ -106,7 +106,7 @@
             // 
             this.tabSuche.Location = new System.Drawing.Point(4, 22);
             this.tabSuche.Name = "tabSuche";
-            this.tabSuche.Size = new System.Drawing.Size(996, 738);
+            this.tabSuche.Size = new System.Drawing.Size(948, 738);
             this.tabSuche.TabIndex = 4;
             this.tabSuche.Text = "Suche";
             this.tabSuche.UseVisualStyleBackColor = true;

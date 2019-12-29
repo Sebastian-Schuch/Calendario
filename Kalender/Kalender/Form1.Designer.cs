@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panHeader = new System.Windows.Forms.Panel();
             this.MinimizeBtn = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -78,7 +77,6 @@
             // 
             this.panHeader.AutoSize = true;
             this.panHeader.Controls.Add(this.MinimizeBtn);
-            this.panHeader.Controls.Add(this.panel1);
             this.panHeader.Controls.Add(this.pbExit);
             this.panHeader.Controls.Add(this.pictureBox3);
             this.panHeader.Controls.Add(this.label1);
@@ -107,13 +105,6 @@
             this.MinimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
             this.MinimizeBtn.MouseEnter += new System.EventHandler(this.MinimizeBtn_MouseEnter);
             this.MinimizeBtn.MouseLeave += new System.EventHandler(this.MinimizeBtn_MouseLeave);
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(430, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(36, 36);
-            this.panel1.TabIndex = 5;
             // 
             // pbExit
             // 
@@ -213,6 +204,7 @@
             this.panSuche.Name = "panSuche";
             this.panSuche.Size = new System.Drawing.Size(263, 41);
             this.panSuche.TabIndex = 6;
+            this.panSuche.Click += new System.EventHandler(this.PanSuche_Click);
             // 
             // label6
             // 
@@ -244,6 +236,7 @@
             this.panMonat.Name = "panMonat";
             this.panMonat.Size = new System.Drawing.Size(263, 41);
             this.panMonat.TabIndex = 5;
+            this.panMonat.Click += new System.EventHandler(this.PanMonat_Click);
             // 
             // label5
             // 
@@ -275,6 +268,7 @@
             this.panWoche.Name = "panWoche";
             this.panWoche.Size = new System.Drawing.Size(263, 41);
             this.panWoche.TabIndex = 4;
+            this.panWoche.Click += new System.EventHandler(this.PanWoche_Click);
             // 
             // label4
             // 
@@ -427,7 +421,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panUnterNav;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox MinimizeBtn;
     }
 }
