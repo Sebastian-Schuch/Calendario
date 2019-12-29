@@ -45,13 +45,13 @@ namespace Kalender
         private Color grauHell1 = ColorTranslator.FromHtml("#525252");
         private Color grauMittel = ColorTranslator.FromHtml("#414141");
         private Color Hauptfarbe1 = ColorTranslator.FromHtml("#ca3e47");
-
+        private Color HeaderGrau = ColorTranslator.FromHtml("#202225");
 
         private void basicDesigns()
         {
             sideNav.Visible = true;
             this.BackColor = grauMittel;
-            panHeader.BackColor = bunt1;
+            panHeader.BackColor = HeaderGrau;
             sideNav.BackColor = grauDunkel1;
             panUnterNav.BackColor = grauDunkel2;
             minimizeNav();
@@ -100,5 +100,61 @@ namespace Kalender
             sideNav.Size = new Size(263, 758);
             pbSideMenu1.Location = new Point(225, 6);
         }
+
+        private void PbExit_MouseLeave(object sender, EventArgs e)
+        {
+            pbExit.Image = Properties.Resources.close;
+        }
+
+        private void PbExit_MouseEnter(object sender, EventArgs e)
+        {
+            pbExit.Image = Properties.Resources.close_hover;
+        }
+
+
+
+        //Dragable Header
+        bool mouseDown = false;
+        private Point lastLocation;
+
+        private void PanHeader_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void PanHeader_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
+
+        private void PanHeader_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+
+        //Minimize Button
+
+        private void MinimizeBtn_MouseEnter(object sender, EventArgs e)
+        {
+            MinimizeBtn.Image = Properties.Resources.minimize_hover;
+        }
+
+        private void MinimizeBtn_MouseLeave(object sender, EventArgs e)
+        {
+            MinimizeBtn.Image = Properties.Resources.minimize;
+        }
+
+        private void MinimizeBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
+
 }

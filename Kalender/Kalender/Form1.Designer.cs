@@ -36,47 +36,49 @@
             this.monat = new System.Windows.Forms.TabPage();
             this.suche = new System.Windows.Forms.TabPage();
             this.panHeader = new System.Windows.Forms.Panel();
-            this.pbExit = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pbSideMenu1 = new System.Windows.Forms.PictureBox();
             this.sideNav = new System.Windows.Forms.Panel();
             this.panUnterNav = new System.Windows.Forms.Panel();
             this.panSuche = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panMonat = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panWoche = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panTag = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panTermin = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.pbSideMenu1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pbTermin = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.MinimizeBtn = new System.Windows.Forms.PictureBox();
+            this.pbExit = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.materialTabControl1.SuspendLayout();
             this.panHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSideMenu1)).BeginInit();
             this.sideNav.SuspendLayout();
             this.panUnterNav.SuspendLayout();
             this.panSuche.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panMonat.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panWoche.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panTag.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panTermin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSideMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTermin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizeBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -145,6 +147,7 @@
             // panHeader
             // 
             this.panHeader.AutoSize = true;
+            this.panHeader.Controls.Add(this.MinimizeBtn);
             this.panHeader.Controls.Add(this.panel1);
             this.panHeader.Controls.Add(this.pbExit);
             this.panHeader.Controls.Add(this.pictureBox3);
@@ -154,70 +157,28 @@
             this.panHeader.Name = "panHeader";
             this.panHeader.Size = new System.Drawing.Size(1060, 39);
             this.panHeader.TabIndex = 1;
+            this.panHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanHeader_MouseDown);
+            this.panHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanHeader_MouseMove);
+            this.panHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanHeader_MouseUp);
             // 
-            // pbExit
+            // panel1
             // 
-            this.pbExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbExit.Image = global::Kalender.Properties.Resources.close;
-            this.pbExit.Location = new System.Drawing.Point(1032, 12);
-            this.pbExit.MaximumSize = new System.Drawing.Size(16, 16);
-            this.pbExit.MinimumSize = new System.Drawing.Size(10, 10);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(16, 16);
-            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbExit.TabIndex = 4;
-            this.pbExit.TabStop = false;
-            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Kalender.Properties.Resources.icon__1_;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 8);
-            this.pictureBox3.MaximumSize = new System.Drawing.Size(36, 36);
-            this.pictureBox3.MinimumSize = new System.Drawing.Size(15, 15);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
+            this.panel1.Location = new System.Drawing.Point(430, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(36, 36);
+            this.panel1.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(54, 9);
+            this.label1.Location = new System.Drawing.Point(51, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Unser Projekt Name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Kalender.Properties.Resources.user;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 714);
-            this.pictureBox2.MaximumSize = new System.Drawing.Size(32, 32);
-            this.pictureBox2.MinimumSize = new System.Drawing.Size(20, 20);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pbSideMenu1
-            // 
-            this.pbSideMenu1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbSideMenu1.Image = global::Kalender.Properties.Resources.menu;
-            this.pbSideMenu1.Location = new System.Drawing.Point(225, 6);
-            this.pbSideMenu1.MaximumSize = new System.Drawing.Size(32, 32);
-            this.pbSideMenu1.MinimumSize = new System.Drawing.Size(15, 15);
-            this.pbSideMenu1.Name = "pbSideMenu1";
-            this.pbSideMenu1.Size = new System.Drawing.Size(26, 26);
-            this.pbSideMenu1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbSideMenu1.TabIndex = 0;
-            this.pbSideMenu1.TabStop = false;
-            this.pbSideMenu1.Click += new System.EventHandler(this.pbSideMenu1_Click_1);
             // 
             // sideNav
             // 
@@ -263,16 +224,6 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Suche";
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(11, 5);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
-            // 
             // panMonat
             // 
             this.panMonat.Controls.Add(this.label5);
@@ -293,16 +244,6 @@
             this.label5.Size = new System.Drawing.Size(68, 25);
             this.label5.TabIndex = 5;
             this.label5.Text = "Monat";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(11, 5);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 4;
-            this.pictureBox6.TabStop = false;
             // 
             // panWoche
             // 
@@ -325,16 +266,6 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Woche";
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(11, 6);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            // 
             // panTag
             // 
             this.panTag.Controls.Add(this.label3);
@@ -355,16 +286,6 @@
             this.label3.Size = new System.Drawing.Size(45, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Tag";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(11, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
             // 
             // panTermin
             // 
@@ -387,6 +308,72 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Terminübersicht";
             // 
+            // pbSideMenu1
+            // 
+            this.pbSideMenu1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbSideMenu1.Image = global::Kalender.Properties.Resources.menu;
+            this.pbSideMenu1.Location = new System.Drawing.Point(225, 6);
+            this.pbSideMenu1.MaximumSize = new System.Drawing.Size(32, 32);
+            this.pbSideMenu1.MinimumSize = new System.Drawing.Size(15, 15);
+            this.pbSideMenu1.Name = "pbSideMenu1";
+            this.pbSideMenu1.Size = new System.Drawing.Size(26, 26);
+            this.pbSideMenu1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSideMenu1.TabIndex = 0;
+            this.pbSideMenu1.TabStop = false;
+            this.pbSideMenu1.Click += new System.EventHandler(this.pbSideMenu1_Click_1);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Kalender.Properties.Resources.user;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 714);
+            this.pictureBox2.MaximumSize = new System.Drawing.Size(32, 32);
+            this.pictureBox2.MinimumSize = new System.Drawing.Size(20, 20);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(11, 5);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 6;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(11, 5);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 4;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(11, 6);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(11, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            // 
             // pbTermin
             // 
             this.pbTermin.Image = ((System.Drawing.Image)(resources.GetObject("pbTermin.Image")));
@@ -397,12 +384,51 @@
             this.pbTermin.TabIndex = 0;
             this.pbTermin.TabStop = false;
             // 
-            // panel1
+            // MinimizeBtn
             // 
-            this.panel1.Location = new System.Drawing.Point(430, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(36, 36);
-            this.panel1.TabIndex = 5;
+            this.MinimizeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MinimizeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MinimizeBtn.Image = global::Kalender.Properties.Resources.minimize;
+            this.MinimizeBtn.Location = new System.Drawing.Point(990, 1);
+            this.MinimizeBtn.MinimumSize = new System.Drawing.Size(10, 10);
+            this.MinimizeBtn.Name = "MinimizeBtn";
+            this.MinimizeBtn.Padding = new System.Windows.Forms.Padding(7);
+            this.MinimizeBtn.Size = new System.Drawing.Size(35, 35);
+            this.MinimizeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MinimizeBtn.TabIndex = 6;
+            this.MinimizeBtn.TabStop = false;
+            this.MinimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
+            this.MinimizeBtn.MouseEnter += new System.EventHandler(this.MinimizeBtn_MouseEnter);
+            this.MinimizeBtn.MouseLeave += new System.EventHandler(this.MinimizeBtn_MouseLeave);
+            // 
+            // pbExit
+            // 
+            this.pbExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbExit.Image = global::Kalender.Properties.Resources.close;
+            this.pbExit.Location = new System.Drawing.Point(1022, 1);
+            this.pbExit.MinimumSize = new System.Drawing.Size(10, 10);
+            this.pbExit.Name = "pbExit";
+            this.pbExit.Padding = new System.Windows.Forms.Padding(7);
+            this.pbExit.Size = new System.Drawing.Size(35, 35);
+            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbExit.TabIndex = 4;
+            this.pbExit.TabStop = false;
+            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
+            this.pbExit.MouseEnter += new System.EventHandler(this.PbExit_MouseEnter);
+            this.pbExit.MouseLeave += new System.EventHandler(this.PbExit_MouseLeave);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Kalender.Properties.Resources.icon__1_;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 8);
+            this.pictureBox3.MaximumSize = new System.Drawing.Size(36, 36);
+            this.pictureBox3.MinimumSize = new System.Drawing.Size(15, 15);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
             // 
             // Form1
             // 
@@ -421,27 +447,28 @@
             this.materialTabControl1.ResumeLayout(false);
             this.panHeader.ResumeLayout(false);
             this.panHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSideMenu1)).EndInit();
             this.sideNav.ResumeLayout(false);
             this.panUnterNav.ResumeLayout(false);
             this.panSuche.ResumeLayout(false);
             this.panSuche.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panMonat.ResumeLayout(false);
             this.panMonat.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panWoche.ResumeLayout(false);
             this.panWoche.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panTag.ResumeLayout(false);
             this.panTag.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panTermin.ResumeLayout(false);
             this.panTermin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSideMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTermin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizeBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,6 +506,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panUnterNav;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox MinimizeBtn;
     }
 }
 

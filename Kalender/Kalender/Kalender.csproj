@@ -36,8 +36,8 @@
     <Reference Include="LollipoUi">
       <HintPath>..\..\..\..\..\Downloads\LollipoUi\LollipoUi.dll</HintPath>
     </Reference>
-    <Reference Include="MaterialSkin">
-      <HintPath>..\..\..\..\Projek_Joni_Michi\Lernkartei\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -73,6 +73,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,6 +104,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bilder\icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bilder\close_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bilder\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bilder\minimize_hover.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
