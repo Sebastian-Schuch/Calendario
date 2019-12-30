@@ -22,9 +22,10 @@ namespace Kalender
         {
             design();
             datumAufButtons();
+            farblichHinterlegen("lbl" + selectedMonat.ToString());
         }
 
-        
+
 
 
         internal void ChangeTab(string tab)
@@ -67,81 +68,118 @@ namespace Kalender
 
         private int jahr, monat, tag, selectedTag, tageAnzahlMonat;
 
+        private void farblichHinterlegen(string lblName)
+        {
+
+            for (int i = 1; i <= 12; i++)
+            {
+                Label lbl1 = this.Controls.Find("lbl" + i.ToString(), true).FirstOrDefault() as Label;
+                lbl1.BackColor = frm.grauDunkel1;
+            }
+
+            Label lbl = this.Controls.Find(lblName, true).FirstOrDefault() as Label;
+            lbl.BackColor = frm.bunt1;
+        }
+
+
+
         private void lbl1_Click(object sender, EventArgs e)
         {
             selectedMonat = 1;
+            farblichHinterlegen("lbl1");
             datumAufButtons();
         }
 
         private void lbl2_Click(object sender, EventArgs e)
         {
             selectedMonat = 2;
+            farblichHinterlegen("lbl2");
             datumAufButtons();
         }
 
         private void lbl3_Click(object sender, EventArgs e)
         {
             selectedMonat = 3;
+            farblichHinterlegen("lbl3");
             datumAufButtons();
         }
 
         private void lbl4_Click(object sender, EventArgs e)
         {
             selectedMonat = 4;
+            farblichHinterlegen("lbl4");
             datumAufButtons();
         }
 
         private void lbl5_Click(object sender, EventArgs e)
         {
             selectedMonat = 5;
+            farblichHinterlegen("lbl5");
             datumAufButtons();
         }
 
         private void lbl6_Click(object sender, EventArgs e)
         {
             selectedMonat = 6;
+            farblichHinterlegen("lbl6");
             datumAufButtons();
         }
 
         private void lbl7_Click(object sender, EventArgs e)
         {
             selectedMonat = 7;
+            farblichHinterlegen("lbl7");
             datumAufButtons();
         }
 
         private void lbl8_Click(object sender, EventArgs e)
         {
             selectedMonat = 8;
+            farblichHinterlegen("lbl8");
             datumAufButtons();
         }
 
         private void lbl9_Click(object sender, EventArgs e)
         {
             selectedMonat = 9;
+            farblichHinterlegen("lbl9");
             datumAufButtons();
         }
 
         private void lbl10_Click(object sender, EventArgs e)
         {
             selectedMonat = 10;
+            farblichHinterlegen("lbl10");
             datumAufButtons();
         }
 
         private void lbl11_Click(object sender, EventArgs e)
         {
             selectedMonat = 11;
+            farblichHinterlegen("lbl11");
             datumAufButtons();
         }
 
         private void lbl12_Click(object sender, EventArgs e)
         {
             selectedMonat = 12;
+            farblichHinterlegen("lbl12");
             datumAufButtons();
         }
 
-        private void TabMonat_Click(object sender, EventArgs e)
-        {
 
+        private void pbmzurueck_Click(object sender, EventArgs e)
+        {
+            selectedJahr--;
+            lblJahr.Text = selectedJahr.ToString();
+            datumAufButtons();
+        }
+
+        private void pbmVorwaerts_Click(object sender, EventArgs e)
+        {
+            selectedJahr++;
+            lblJahr.Text = selectedJahr.ToString();
+            datumAufButtons();
         }
 
         private int selectedMonat = DateTime.Today.Month;
@@ -153,7 +191,7 @@ namespace Kalender
             selectedJahr = Convert.ToInt16(lblJahr.Text);
             tageAnzahlMonat = Convert.ToInt32(DateTime.DaysInMonth(selectedJahr, selectedMonat));
             DateTime datum = new DateTime(selectedJahr, selectedMonat, 1);
-            wochentag = (int)datum.DayOfWeek;
+            wochentag = Convert.ToInt16(datum.DayOfWeek);
 
             for (int i = 1; i <= 42; i++)
             {

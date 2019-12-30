@@ -17,20 +17,6 @@ namespace Kalender
         public Form1()
         {
             InitializeComponent();
-            /*
-            // Create a material theme manager and add the form to manage (this)
-            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
-
-            // Configure color schema
-            materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.Green800,
-                Primary.Grey800,
-                Primary.Grey200,
-                Accent.LightBlue200,
-                TextShade.WHITE
-            );*/
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -210,7 +196,7 @@ namespace Kalender
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            foreach(Termin t in arrTermine)
+            foreach (Termin t in arrTermine)
             {
                 MessageBox.Show(t.Monat.ToString());
             }
