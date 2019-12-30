@@ -11,9 +11,12 @@ namespace Kalender
         //Objektvariablen
         protected string terName;
         protected string terBeschreibung;
-        protected DateTime terTermindatum;
         protected bool terGanztaegig;
-
+        protected int jahr;
+        protected int monat;
+        protected int tag;
+        protected int vonInMin;
+        protected int bisInMin;
         //Klassenvariablen
         private static int terAnzahl = 0;
         private static int terID = 0;
@@ -21,11 +24,15 @@ namespace Kalender
         public Termin() { }
 
         //Konstruktor
-        public Termin(string terName, string terBeschreibung, DateTime terTermindatum, bool terGanztaegig)
+        public Termin(string terName, string terBeschreibung, int jahr, int monat, int tag, bool terGanztaegig, int vonInMin, int bisInMin)
         {
             this.terName = terName;
             this.terBeschreibung = terBeschreibung;
-            this.terTermindatum = terTermindatum;
+            this.jahr = jahr;
+            this.monat = monat;
+            this.tag = tag;
+            this.vonInMin = vonInMin;
+            this.bisInMin = bisInMin;
             this.terGanztaegig = terGanztaegig;
             terAnzahl++;
             terID++;
@@ -44,10 +51,33 @@ namespace Kalender
             set => terBeschreibung = value;
         }
 
-        public DateTime TerTermindatum
+        public int Jahr
         {
-            get => terTermindatum;
-            set => terTermindatum = value;
+            get => jahr;
+            set => jahr = value;
+        }
+
+        public int Monat
+        {
+            get => monat;
+            set => monat = value;
+        }
+        public int Tag
+        {
+            get => tag;
+            set => tag = value;
+        }
+
+        public int VonInMin
+        {
+            get => vonInMin;
+            set => vonInMin = value;
+        }
+
+        public int BisInMin
+        {
+            get => bisInMin;
+            set => bisInMin = value;
         }
 
         public bool TerGanztaegig
@@ -62,7 +92,7 @@ namespace Kalender
 
         public override string ToString()
         {
-            return terID + terName + " " + terBeschreibung + "\t" + terTermindatum.ToShortDateString() + "\t" + terGanztaegig;
+            return terID + terName + " " + terBeschreibung +  "\t" + terGanztaegig;
         }
     }
 

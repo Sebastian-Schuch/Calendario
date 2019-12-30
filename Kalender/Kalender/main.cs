@@ -22,6 +22,10 @@ namespace Kalender
         {
             design();
         }
+
+        
+
+
         internal void ChangeTab(string tab)
         {
 

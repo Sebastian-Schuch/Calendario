@@ -37,8 +37,11 @@ namespace Kalender
         {
             basicDesigns();
             combineForms();
+            TerminHinzufuegen th = new TerminHinzufuegen();
+            th.f1 = this;
+            th.Show();
         }
-
+        internal List<Termin> arrTermine = new List<Termin>();
         //ColorScheme
         internal Color bunt1 = Color.FromArgb(95, 174, 87);
         internal Color grauDunkel1 = ColorTranslator.FromHtml("#313131");
@@ -203,6 +206,14 @@ namespace Kalender
         {
             frmain.ChangeTab("suche");
             minimizeNav();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            foreach(Termin t in arrTermine)
+            {
+                MessageBox.Show(t.TerNname);
+            }
         }
     }
 

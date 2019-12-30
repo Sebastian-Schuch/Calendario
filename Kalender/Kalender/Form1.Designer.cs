@@ -53,6 +53,7 @@
             this.panTermin = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pbTermin = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizeBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
@@ -148,6 +149,7 @@
             // 
             // sideNav
             // 
+            this.sideNav.Controls.Add(this.button1);
             this.sideNav.Controls.Add(this.panUnterNav);
             this.sideNav.Controls.Add(this.pictureBox2);
             this.sideNav.Controls.Add(this.panSuche);
@@ -355,6 +357,16 @@
             this.pbTermin.TabIndex = 4;
             this.pbTermin.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(46, 525);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(145, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Output Terminliste (Debug)";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -422,6 +434,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panUnterNav;
         private System.Windows.Forms.PictureBox MinimizeBtn;
+        private System.Windows.Forms.Button button1;
     }
 }
 
