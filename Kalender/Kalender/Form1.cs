@@ -37,7 +37,7 @@ namespace Kalender
         {
             basicDesigns();
             combineForms();
-            TerminHinzufuegen th = new TerminHinzufuegen();
+            TerminHinzufuegen th = new TerminHinzufuegen(2019, 11, 30);
             th.f1 = this;
             th.Show();
         }
@@ -212,7 +212,7 @@ namespace Kalender
         {
             foreach(Termin t in arrTermine)
             {
-                MessageBox.Show(t.TerNname);
+                MessageBox.Show(t.Monat.ToString());
             }
         }
     }

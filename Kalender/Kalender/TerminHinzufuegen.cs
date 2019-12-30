@@ -12,9 +12,12 @@ namespace Kalender
 {
     public partial class TerminHinzufuegen : Form
     {
-        public TerminHinzufuegen()
+        public TerminHinzufuegen(int jahr, int monat, int tag)
         {
             InitializeComponent();
+            this.jahr = jahr;
+            this.monat = monat;
+            this.tag = tag;
         }
         internal Form1 f1;
         internal Color grauMittel = ColorTranslator.FromHtml("#414141");
