@@ -123,20 +123,16 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pbAlarm2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAASkAAAEpASk1vDIAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAAB0klEQVRIS71WsU7DMBDNAgMbQmLhI0DiJ1BtDx2SlEqIjYGVDwBmhm4MfEa/oSNCXdgYSFL1Dyqk
-        LuaenUvd9Bq5SGV41cX33p1z53OaWGu34uumf/o9UKrK9GOZ63GZmbkD2ViDDxxJyxAX3+8uD4qBfipz
-        s6RgthtmiWTQSLE2FmZp74KE0yDIoszVhAKNqoEZArD9GnwNbwptO97aAwnvV7s2yyJXz59pehhyQsAH
-        TqhBjJDTGH7nnljl+mOW6/OQ2AVwoeEk4Zu4H9QPr8jBpXrO+v0T6ssbBXgthuq47YdmlURPOYZz+obW
-        2bfsvMzUQy22sCUOtE0VqPFYc0eRF1HPtoix2gTxyJY4gO+J3yxiJzjLtXDR1dDYBIiBWOAhdlIPEQnV
-        RBIwYhMA9RF2ZaIHmlAnNCOJzNgtAebEccfUPDf6FgMkkRm7JPDDSFyK/Q8JIktUXfeuOAFsicNYK1Fs
-        k4Eq1WeA5Aux1uTYYwpgmgHJx9g4prGD5qdU/wBd99TGoLnFpoHbr4oiU7eeQxshW+KIVwV+Yi67uTFH
-        dAe9ALDb/s7LDtjrdc0g5/4+OAz/Jnv6ZDJQP9943lkXdvzoh8Axw1muh/EPf1ts8gvES9IdNL9D1gAA
-        AABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
+        KQAAASkBKTW8MgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHSSURBVEhLvVax
+        TsMwEM0CAxtCYuEjQOInUG0PHZKUSoiNgZUPAGaGbgx8Rr+hI0Jd2BhIUvUPKqQu5p6dS930GrlIZXjV
+        xffenXPnc5pYa7fi66Z/+j1Qqsr0Y5nrcZmZuQPZWIMPHEnLEBff7y4PioF+KnOzpGC2G2aJZNBIsTYW
+        ZmnvgoTTIMiizNWEAo2qgRkCsP0afA1vCm073toDCe9XuzbLIlfPn2l6GHJCwAdOqEGMkNMYfueeWOX6
+        Y5br85DYBXCh4SThm7gf1A+vyMGles76/RPqyxsFeC2G6rjth2aVRE85hnP6htbZt+y8zNRDLbawJQ60
+        TRWo8VhzR5EXUc+2iLHaBPHIljiA74nfLGInOMu1cNHV0NgEiIFY4CF2Ug8RCdVEEjBiEwD1EXZlogea
+        UCc0I4nM2C0B5sRxx9Q8N/oWAySRGbsk8MNIXIr9DwkiS1Rd9644AWyJw1grUWyTgSrVZ4DkC7HW5Nhj
+        CmCaAcnH2DimsYPmp1T/AF331MagucWmgduviiJTt55DGyFb4ohXBX5iLru5MUd0B70AsNv+zssO2Ot1
+        zSDn/j44DP8me/pkMlA/33jeWRd2/OiHwDHDWa6H8Q9/W2zyC8RL0h00v0PWAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="TTalarm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>

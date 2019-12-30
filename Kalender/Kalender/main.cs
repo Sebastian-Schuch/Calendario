@@ -12,7 +12,7 @@ namespace Kalender
 {
     public partial class main : Form
     {
-        private Form1 frm = new Form1();
+        internal Form1 frm;
         public main()
         {
             InitializeComponent();
@@ -23,6 +23,7 @@ namespace Kalender
             design();
             datumAufButtons();
             farblichHinterlegen("lbl" + selectedMonat.ToString());
+            SuchListViewRefresh("");
         }
 
 
@@ -183,6 +184,14 @@ namespace Kalender
         }
 
         private int selectedJahr = DateTime.Today.Year;
+
+
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private int selectedMonat = DateTime.Today.Month;
         private int wochentag;
 
@@ -225,6 +234,46 @@ namespace Kalender
                 Button btn = this.Controls.Find("button" + i.ToString(), true).FirstOrDefault() as Button;
                 btn.Visible = false;
             }
+        }
+
+        internal void SuchListViewRefresh(string filter)
+        {
+            if (filter.Equals(""))
+            {
+                ListViewItem lsItem;
+                LVsuche.Items.Clear();
+                foreach (Termin t in frm.arrTermine)
+                {
+                    lsItem = new ListViewItem("");
+                    lsItem.SubItems.Add(t.TerNname);
+                    lsItem.SubItems.Add(t.Tag + "." + t.Monat + "." + t.Jahr);
+
+                    LVsuche.Items.Add(lsItem);
+                }
+            }
+            else
+            {
+                ListViewItem lsItem;
+                LVsuche.Items.Clear();
+                foreach (Termin t in frm.arrTermine)
+                {
+                    if (t.TerNname.StartsWith(filter))
+                    {
+
+                   
+                    lsItem = new ListViewItem("");
+                    lsItem.SubItems.Add(t.TerNname);
+                    lsItem.SubItems.Add(t.Tag + "." + t.Monat + "." + t.Jahr);
+
+                    LVsuche.Items.Add(lsItem);
+                    }
+                }
+            }
+
+        }
+        private void TxtVon_TextChanged(object sender, EventArgs e)
+        {
+            SuchListViewRefresh(txtSuche.Text);
         }
     }
 }

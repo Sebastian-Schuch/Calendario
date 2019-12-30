@@ -31,6 +31,27 @@
             this.tabControlMain = new MaterialSkin.Controls.MaterialTabControl();
             this.tabTerminuebersicht = new System.Windows.Forms.TabPage();
             this.tabTag = new System.Windows.Forms.TabPage();
+            this.tabWoche = new System.Windows.Forms.TabPage();
+            this.tlpWoche = new System.Windows.Forms.TableLayoutPanel();
+            this.btnm2 = new System.Windows.Forms.Button();
+            this.btnm7 = new System.Windows.Forms.Button();
+            this.btnm6 = new System.Windows.Forms.Button();
+            this.btnm5 = new System.Windows.Forms.Button();
+            this.btnm4 = new System.Windows.Forms.Button();
+            this.btnm3 = new System.Windows.Forms.Button();
+            this.btnm1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pbwJahrVorwaerts = new System.Windows.Forms.PictureBox();
+            this.pbwJahrzurueck = new System.Windows.Forms.PictureBox();
+            this.lblmJahr = new System.Windows.Forms.Label();
+            this.lblwMonat = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.tabMonat = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button36 = new System.Windows.Forms.Button();
@@ -76,6 +97,8 @@
             this.button41 = new System.Windows.Forms.Button();
             this.button42 = new System.Windows.Forms.Button();
             this.panMonatswahl = new System.Windows.Forms.Panel();
+            this.pbmVorwaerts = new System.Windows.Forms.PictureBox();
+            this.pbmzurueck = new System.Windows.Forms.PictureBox();
             this.lblJahr = new System.Windows.Forms.Label();
             this.lbl12 = new System.Windows.Forms.Label();
             this.lbl7 = new System.Windows.Forms.Label();
@@ -97,40 +120,24 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.tabSuche = new System.Windows.Forms.TabPage();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblwMonat = new System.Windows.Forms.Label();
-            this.lblmJahr = new System.Windows.Forms.Label();
-            this.tlpWoche = new System.Windows.Forms.TableLayoutPanel();
-            this.btnm1 = new System.Windows.Forms.Button();
-            this.btnm3 = new System.Windows.Forms.Button();
-            this.btnm4 = new System.Windows.Forms.Button();
-            this.btnm5 = new System.Windows.Forms.Button();
-            this.btnm6 = new System.Windows.Forms.Button();
-            this.btnm7 = new System.Windows.Forms.Button();
-            this.btnm2 = new System.Windows.Forms.Button();
-            this.tabWoche = new System.Windows.Forms.TabPage();
-            this.pbwJahrzurueck = new System.Windows.Forms.PictureBox();
-            this.pbwJahrVorwaerts = new System.Windows.Forms.PictureBox();
-            this.pbmVorwaerts = new System.Windows.Forms.PictureBox();
-            this.pbmzurueck = new System.Windows.Forms.PictureBox();
+            this.LVsuche = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtSuche = new System.Windows.Forms.TextBox();
             this.tabControlMain.SuspendLayout();
+            this.tabWoche.SuspendLayout();
+            this.tlpWoche.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrVorwaerts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrzurueck)).BeginInit();
             this.tabMonat.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panMonatswahl.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.tlpWoche.SuspendLayout();
-            this.tabWoche.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrzurueck)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrVorwaerts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbmVorwaerts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbmzurueck)).BeginInit();
+            this.tabSuche.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -168,6 +175,277 @@
             this.tabTag.Text = "Tag";
             this.tabTag.UseVisualStyleBackColor = true;
             // 
+            // tabWoche
+            // 
+            this.tabWoche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.tabWoche.Controls.Add(this.tlpWoche);
+            this.tabWoche.Controls.Add(this.panel1);
+            this.tabWoche.Controls.Add(this.label21);
+            this.tabWoche.Controls.Add(this.label22);
+            this.tabWoche.Controls.Add(this.label23);
+            this.tabWoche.Controls.Add(this.label24);
+            this.tabWoche.Controls.Add(this.label25);
+            this.tabWoche.Controls.Add(this.label26);
+            this.tabWoche.Controls.Add(this.label27);
+            this.tabWoche.Location = new System.Drawing.Point(4, 22);
+            this.tabWoche.Name = "tabWoche";
+            this.tabWoche.Size = new System.Drawing.Size(1019, 742);
+            this.tabWoche.TabIndex = 2;
+            this.tabWoche.Text = "Woche";
+            // 
+            // tlpWoche
+            // 
+            this.tlpWoche.ColumnCount = 7;
+            this.tlpWoche.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
+            this.tlpWoche.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
+            this.tlpWoche.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
+            this.tlpWoche.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
+            this.tlpWoche.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
+            this.tlpWoche.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
+            this.tlpWoche.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
+            this.tlpWoche.Controls.Add(this.btnm2, 1, 0);
+            this.tlpWoche.Controls.Add(this.btnm7, 6, 0);
+            this.tlpWoche.Controls.Add(this.btnm6, 5, 0);
+            this.tlpWoche.Controls.Add(this.btnm5, 4, 0);
+            this.tlpWoche.Controls.Add(this.btnm4, 3, 0);
+            this.tlpWoche.Controls.Add(this.btnm3, 2, 0);
+            this.tlpWoche.Controls.Add(this.btnm1, 0, 0);
+            this.tlpWoche.Location = new System.Drawing.Point(191, 161);
+            this.tlpWoche.Name = "tlpWoche";
+            this.tlpWoche.RowCount = 1;
+            this.tlpWoche.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
+            this.tlpWoche.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
+            this.tlpWoche.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
+            this.tlpWoche.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
+            this.tlpWoche.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
+            this.tlpWoche.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
+            this.tlpWoche.Size = new System.Drawing.Size(637, 400);
+            this.tlpWoche.TabIndex = 27;
+            // 
+            // btnm2
+            // 
+            this.btnm2.FlatAppearance.BorderSize = 0;
+            this.btnm2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnm2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnm2.ForeColor = System.Drawing.Color.White;
+            this.btnm2.Location = new System.Drawing.Point(94, 3);
+            this.btnm2.Name = "btnm2";
+            this.btnm2.Size = new System.Drawing.Size(85, 394);
+            this.btnm2.TabIndex = 19;
+            this.btnm2.Text = "1";
+            this.btnm2.UseVisualStyleBackColor = true;
+            // 
+            // btnm7
+            // 
+            this.btnm7.FlatAppearance.BorderSize = 0;
+            this.btnm7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnm7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnm7.ForeColor = System.Drawing.Color.White;
+            this.btnm7.Location = new System.Drawing.Point(549, 3);
+            this.btnm7.Name = "btnm7";
+            this.btnm7.Size = new System.Drawing.Size(85, 394);
+            this.btnm7.TabIndex = 25;
+            this.btnm7.Text = "1";
+            this.btnm7.UseVisualStyleBackColor = true;
+            // 
+            // btnm6
+            // 
+            this.btnm6.FlatAppearance.BorderSize = 0;
+            this.btnm6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnm6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnm6.ForeColor = System.Drawing.Color.White;
+            this.btnm6.Location = new System.Drawing.Point(458, 3);
+            this.btnm6.Name = "btnm6";
+            this.btnm6.Size = new System.Drawing.Size(85, 394);
+            this.btnm6.TabIndex = 24;
+            this.btnm6.Text = "1";
+            this.btnm6.UseVisualStyleBackColor = true;
+            // 
+            // btnm5
+            // 
+            this.btnm5.FlatAppearance.BorderSize = 0;
+            this.btnm5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnm5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnm5.ForeColor = System.Drawing.Color.White;
+            this.btnm5.Location = new System.Drawing.Point(367, 3);
+            this.btnm5.Name = "btnm5";
+            this.btnm5.Size = new System.Drawing.Size(85, 394);
+            this.btnm5.TabIndex = 23;
+            this.btnm5.Text = "1";
+            this.btnm5.UseVisualStyleBackColor = true;
+            // 
+            // btnm4
+            // 
+            this.btnm4.FlatAppearance.BorderSize = 0;
+            this.btnm4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnm4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnm4.ForeColor = System.Drawing.Color.White;
+            this.btnm4.Location = new System.Drawing.Point(276, 3);
+            this.btnm4.Name = "btnm4";
+            this.btnm4.Size = new System.Drawing.Size(85, 394);
+            this.btnm4.TabIndex = 22;
+            this.btnm4.Text = "1";
+            this.btnm4.UseVisualStyleBackColor = true;
+            // 
+            // btnm3
+            // 
+            this.btnm3.FlatAppearance.BorderSize = 0;
+            this.btnm3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnm3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnm3.ForeColor = System.Drawing.Color.White;
+            this.btnm3.Location = new System.Drawing.Point(185, 3);
+            this.btnm3.Name = "btnm3";
+            this.btnm3.Size = new System.Drawing.Size(85, 394);
+            this.btnm3.TabIndex = 21;
+            this.btnm3.Text = "1";
+            this.btnm3.UseVisualStyleBackColor = true;
+            // 
+            // btnm1
+            // 
+            this.btnm1.FlatAppearance.BorderSize = 0;
+            this.btnm1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnm1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnm1.ForeColor = System.Drawing.Color.White;
+            this.btnm1.Location = new System.Drawing.Point(3, 3);
+            this.btnm1.Name = "btnm1";
+            this.btnm1.Size = new System.Drawing.Size(85, 394);
+            this.btnm1.TabIndex = 20;
+            this.btnm1.Text = "1";
+            this.btnm1.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.pbwJahrVorwaerts);
+            this.panel1.Controls.Add(this.pbwJahrzurueck);
+            this.panel1.Controls.Add(this.lblmJahr);
+            this.panel1.Controls.Add(this.lblwMonat);
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1016, 43);
+            this.panel1.TabIndex = 26;
+            // 
+            // pbwJahrVorwaerts
+            // 
+            this.pbwJahrVorwaerts.Image = global::Kalender.Properties.Resources.right_arrow;
+            this.pbwJahrVorwaerts.Location = new System.Drawing.Point(938, 11);
+            this.pbwJahrVorwaerts.Name = "pbwJahrVorwaerts";
+            this.pbwJahrVorwaerts.Size = new System.Drawing.Size(20, 20);
+            this.pbwJahrVorwaerts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbwJahrVorwaerts.TabIndex = 14;
+            this.pbwJahrVorwaerts.TabStop = false;
+            // 
+            // pbwJahrzurueck
+            // 
+            this.pbwJahrzurueck.Image = global::Kalender.Properties.Resources.back;
+            this.pbwJahrzurueck.Location = new System.Drawing.Point(864, 11);
+            this.pbwJahrzurueck.Name = "pbwJahrzurueck";
+            this.pbwJahrzurueck.Size = new System.Drawing.Size(20, 20);
+            this.pbwJahrzurueck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbwJahrzurueck.TabIndex = 13;
+            this.pbwJahrzurueck.TabStop = false;
+            // 
+            // lblmJahr
+            // 
+            this.lblmJahr.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblmJahr.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmJahr.ForeColor = System.Drawing.Color.White;
+            this.lblmJahr.Location = new System.Drawing.Point(876, 0);
+            this.lblmJahr.Name = "lblmJahr";
+            this.lblmJahr.Size = new System.Drawing.Size(74, 40);
+            this.lblmJahr.TabIndex = 12;
+            this.lblmJahr.Text = "2019";
+            this.lblmJahr.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblwMonat
+            // 
+            this.lblwMonat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblwMonat.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblwMonat.ForeColor = System.Drawing.Color.White;
+            this.lblwMonat.Location = new System.Drawing.Point(397, 1);
+            this.lblwMonat.Name = "lblwMonat";
+            this.lblwMonat.Size = new System.Drawing.Size(219, 40);
+            this.lblwMonat.TabIndex = 0;
+            this.lblwMonat.Text = "Monat";
+            this.lblwMonat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label21
+            // 
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(735, 86);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(91, 24);
+            this.label21.TabIndex = 25;
+            this.label21.Text = "So";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Location = new System.Drawing.Point(644, 86);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(91, 24);
+            this.label22.TabIndex = 24;
+            this.label22.Text = "Sa";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label23
+            // 
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(553, 86);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(91, 24);
+            this.label23.TabIndex = 23;
+            this.label23.Text = "Fr";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label24
+            // 
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(462, 86);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(91, 24);
+            this.label24.TabIndex = 22;
+            this.label24.Text = "Do";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label25
+            // 
+            this.label25.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Location = new System.Drawing.Point(371, 86);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(91, 24);
+            this.label25.TabIndex = 21;
+            this.label25.Text = "Mi";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label26
+            // 
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(281, 86);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(91, 24);
+            this.label26.TabIndex = 20;
+            this.label26.Text = "Di";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label27
+            // 
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.Location = new System.Drawing.Point(191, 86);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(91, 24);
+            this.label27.TabIndex = 19;
+            this.label27.Text = "Mo";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tabMonat
             // 
             this.tabMonat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
@@ -185,7 +463,6 @@
             this.tabMonat.Size = new System.Drawing.Size(1019, 742);
             this.tabMonat.TabIndex = 3;
             this.tabMonat.Text = "Monat";
-
             // 
             // tableLayoutPanel1
             // 
@@ -820,6 +1097,30 @@
             this.panMonatswahl.Size = new System.Drawing.Size(1016, 43);
             this.panMonatswahl.TabIndex = 16;
             // 
+            // pbmVorwaerts
+            // 
+            this.pbmVorwaerts.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbmVorwaerts.Image = global::Kalender.Properties.Resources.right_arrow;
+            this.pbmVorwaerts.Location = new System.Drawing.Point(941, 11);
+            this.pbmVorwaerts.Name = "pbmVorwaerts";
+            this.pbmVorwaerts.Size = new System.Drawing.Size(20, 20);
+            this.pbmVorwaerts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbmVorwaerts.TabIndex = 16;
+            this.pbmVorwaerts.TabStop = false;
+            this.pbmVorwaerts.Click += new System.EventHandler(this.pbmVorwaerts_Click);
+            // 
+            // pbmzurueck
+            // 
+            this.pbmzurueck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbmzurueck.Image = global::Kalender.Properties.Resources.back;
+            this.pbmzurueck.Location = new System.Drawing.Point(863, 11);
+            this.pbmzurueck.Name = "pbmzurueck";
+            this.pbmzurueck.Size = new System.Drawing.Size(20, 20);
+            this.pbmzurueck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbmzurueck.TabIndex = 15;
+            this.pbmzurueck.TabStop = false;
+            this.pbmzurueck.Click += new System.EventHandler(this.pbmzurueck_Click);
+            // 
             // lblJahr
             // 
             this.lblJahr.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1067,307 +1368,74 @@
             // 
             // tabSuche
             // 
+            this.tabSuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.tabSuche.Controls.Add(this.panel2);
+            this.tabSuche.Controls.Add(this.txtSuche);
+            this.tabSuche.Controls.Add(this.LVsuche);
             this.tabSuche.Location = new System.Drawing.Point(4, 22);
             this.tabSuche.Name = "tabSuche";
             this.tabSuche.Size = new System.Drawing.Size(1019, 742);
             this.tabSuche.TabIndex = 4;
             this.tabSuche.Text = "Suche";
-            this.tabSuche.UseVisualStyleBackColor = true;
             // 
-            // label27
+            // LVsuche
             // 
-            this.label27.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(191, 86);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(91, 24);
-            this.label27.TabIndex = 19;
-            this.label27.Text = "Mo";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LVsuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.LVsuche.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LVsuche.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader3,
+            this.columnHeader2});
+            this.LVsuche.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F);
+            this.LVsuche.ForeColor = System.Drawing.Color.White;
+            this.LVsuche.FullRowSelect = true;
+            this.LVsuche.HideSelection = false;
+            this.LVsuche.Location = new System.Drawing.Point(195, 187);
+            this.LVsuche.Name = "LVsuche";
+            this.LVsuche.ShowGroups = false;
+            this.LVsuche.Size = new System.Drawing.Size(593, 526);
+            this.LVsuche.TabIndex = 0;
+            this.LVsuche.UseCompatibleStateImageBehavior = false;
+            this.LVsuche.View = System.Windows.Forms.View.Details;
             // 
-            // label26
+            // columnHeader1
             // 
-            this.label26.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(281, 86);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(91, 24);
-            this.label26.TabIndex = 20;
-            this.label26.Text = "Di";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.columnHeader1.Text = "";
+            this.columnHeader1.Width = 0;
             // 
-            // label25
+            // columnHeader2
             // 
-            this.label25.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(371, 86);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(91, 24);
-            this.label25.TabIndex = 21;
-            this.label25.Text = "Mi";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.columnHeader2.Text = "Datum";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 300;
             // 
-            // label24
+            // columnHeader3
             // 
-            this.label24.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(462, 86);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(91, 24);
-            this.label24.TabIndex = 22;
-            this.label24.Text = "Do";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.columnHeader3.Text = "Termin";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 291;
             // 
-            // label23
+            // panel2
             // 
-            this.label23.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(553, 86);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(91, 24);
-            this.label23.TabIndex = 23;
-            this.label23.Text = "Fr";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(195, 162);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(590, 2);
+            this.panel2.TabIndex = 12;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
-            // label22
+            // txtSuche
             // 
-            this.label22.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(644, 86);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(91, 24);
-            this.label22.TabIndex = 24;
-            this.label22.Text = "Sa";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label21
-            // 
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(735, 86);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(91, 24);
-            this.label21.TabIndex = 25;
-            this.label21.Text = "So";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel1.Controls.Add(this.pbwJahrVorwaerts);
-            this.panel1.Controls.Add(this.pbwJahrzurueck);
-            this.panel1.Controls.Add(this.lblmJahr);
-            this.panel1.Controls.Add(this.lblwMonat);
-            this.panel1.Location = new System.Drawing.Point(-1, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1016, 43);
-            this.panel1.TabIndex = 26;
-            // 
-            // lblwMonat
-            // 
-            this.lblwMonat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblwMonat.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblwMonat.ForeColor = System.Drawing.Color.White;
-            this.lblwMonat.Location = new System.Drawing.Point(397, 1);
-            this.lblwMonat.Name = "lblwMonat";
-            this.lblwMonat.Size = new System.Drawing.Size(219, 40);
-            this.lblwMonat.TabIndex = 0;
-            this.lblwMonat.Text = "Monat";
-            this.lblwMonat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblmJahr
-            // 
-            this.lblmJahr.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblmJahr.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmJahr.ForeColor = System.Drawing.Color.White;
-            this.lblmJahr.Location = new System.Drawing.Point(876, 0);
-            this.lblmJahr.Name = "lblmJahr";
-            this.lblmJahr.Size = new System.Drawing.Size(74, 40);
-            this.lblmJahr.TabIndex = 12;
-            this.lblmJahr.Text = "2019";
-            this.lblmJahr.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tlpWoche
-            // 
-            this.tlpWoche.ColumnCount = 7;
-            this.tlpWoche.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
-            this.tlpWoche.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
-            this.tlpWoche.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
-            this.tlpWoche.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
-            this.tlpWoche.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
-            this.tlpWoche.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
-            this.tlpWoche.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
-            this.tlpWoche.Controls.Add(this.btnm2, 1, 0);
-            this.tlpWoche.Controls.Add(this.btnm7, 6, 0);
-            this.tlpWoche.Controls.Add(this.btnm6, 5, 0);
-            this.tlpWoche.Controls.Add(this.btnm5, 4, 0);
-            this.tlpWoche.Controls.Add(this.btnm4, 3, 0);
-            this.tlpWoche.Controls.Add(this.btnm3, 2, 0);
-            this.tlpWoche.Controls.Add(this.btnm1, 0, 0);
-            this.tlpWoche.Location = new System.Drawing.Point(191, 161);
-            this.tlpWoche.Name = "tlpWoche";
-            this.tlpWoche.RowCount = 1;
-            this.tlpWoche.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
-            this.tlpWoche.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
-            this.tlpWoche.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
-            this.tlpWoche.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
-            this.tlpWoche.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
-            this.tlpWoche.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
-            this.tlpWoche.Size = new System.Drawing.Size(637, 400);
-            this.tlpWoche.TabIndex = 27;
-            // 
-            // btnm1
-            // 
-            this.btnm1.FlatAppearance.BorderSize = 0;
-            this.btnm1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnm1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnm1.ForeColor = System.Drawing.Color.White;
-            this.btnm1.Location = new System.Drawing.Point(3, 3);
-            this.btnm1.Name = "btnm1";
-            this.btnm1.Size = new System.Drawing.Size(85, 394);
-            this.btnm1.TabIndex = 20;
-            this.btnm1.Text = "1";
-            this.btnm1.UseVisualStyleBackColor = true;
-            // 
-            // btnm3
-            // 
-            this.btnm3.FlatAppearance.BorderSize = 0;
-            this.btnm3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnm3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnm3.ForeColor = System.Drawing.Color.White;
-            this.btnm3.Location = new System.Drawing.Point(185, 3);
-            this.btnm3.Name = "btnm3";
-            this.btnm3.Size = new System.Drawing.Size(85, 394);
-            this.btnm3.TabIndex = 21;
-            this.btnm3.Text = "1";
-            this.btnm3.UseVisualStyleBackColor = true;
-            // 
-            // btnm4
-            // 
-            this.btnm4.FlatAppearance.BorderSize = 0;
-            this.btnm4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnm4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnm4.ForeColor = System.Drawing.Color.White;
-            this.btnm4.Location = new System.Drawing.Point(276, 3);
-            this.btnm4.Name = "btnm4";
-            this.btnm4.Size = new System.Drawing.Size(85, 394);
-            this.btnm4.TabIndex = 22;
-            this.btnm4.Text = "1";
-            this.btnm4.UseVisualStyleBackColor = true;
-            // 
-            // btnm5
-            // 
-            this.btnm5.FlatAppearance.BorderSize = 0;
-            this.btnm5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnm5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnm5.ForeColor = System.Drawing.Color.White;
-            this.btnm5.Location = new System.Drawing.Point(367, 3);
-            this.btnm5.Name = "btnm5";
-            this.btnm5.Size = new System.Drawing.Size(85, 394);
-            this.btnm5.TabIndex = 23;
-            this.btnm5.Text = "1";
-            this.btnm5.UseVisualStyleBackColor = true;
-            // 
-            // btnm6
-            // 
-            this.btnm6.FlatAppearance.BorderSize = 0;
-            this.btnm6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnm6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnm6.ForeColor = System.Drawing.Color.White;
-            this.btnm6.Location = new System.Drawing.Point(458, 3);
-            this.btnm6.Name = "btnm6";
-            this.btnm6.Size = new System.Drawing.Size(85, 394);
-            this.btnm6.TabIndex = 24;
-            this.btnm6.Text = "1";
-            this.btnm6.UseVisualStyleBackColor = true;
-            // 
-            // btnm7
-            // 
-            this.btnm7.FlatAppearance.BorderSize = 0;
-            this.btnm7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnm7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnm7.ForeColor = System.Drawing.Color.White;
-            this.btnm7.Location = new System.Drawing.Point(549, 3);
-            this.btnm7.Name = "btnm7";
-            this.btnm7.Size = new System.Drawing.Size(85, 394);
-            this.btnm7.TabIndex = 25;
-            this.btnm7.Text = "1";
-            this.btnm7.UseVisualStyleBackColor = true;
-            // 
-            // btnm2
-            // 
-            this.btnm2.FlatAppearance.BorderSize = 0;
-            this.btnm2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnm2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnm2.ForeColor = System.Drawing.Color.White;
-            this.btnm2.Location = new System.Drawing.Point(94, 3);
-            this.btnm2.Name = "btnm2";
-            this.btnm2.Size = new System.Drawing.Size(85, 394);
-            this.btnm2.TabIndex = 19;
-            this.btnm2.Text = "1";
-            this.btnm2.UseVisualStyleBackColor = true;
-            // 
-            // tabWoche
-            // 
-            this.tabWoche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.tabWoche.Controls.Add(this.tlpWoche);
-            this.tabWoche.Controls.Add(this.panel1);
-            this.tabWoche.Controls.Add(this.label21);
-            this.tabWoche.Controls.Add(this.label22);
-            this.tabWoche.Controls.Add(this.label23);
-            this.tabWoche.Controls.Add(this.label24);
-            this.tabWoche.Controls.Add(this.label25);
-            this.tabWoche.Controls.Add(this.label26);
-            this.tabWoche.Controls.Add(this.label27);
-            this.tabWoche.Location = new System.Drawing.Point(4, 22);
-            this.tabWoche.Name = "tabWoche";
-            this.tabWoche.Size = new System.Drawing.Size(1019, 742);
-            this.tabWoche.TabIndex = 2;
-            this.tabWoche.Text = "Woche";
-            // 
-            // pbwJahrzurueck
-            // 
-            this.pbwJahrzurueck.Image = global::Kalender.Properties.Resources.back;
-            this.pbwJahrzurueck.Location = new System.Drawing.Point(864, 11);
-            this.pbwJahrzurueck.Name = "pbwJahrzurueck";
-            this.pbwJahrzurueck.Size = new System.Drawing.Size(20, 20);
-            this.pbwJahrzurueck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbwJahrzurueck.TabIndex = 13;
-            this.pbwJahrzurueck.TabStop = false;
-            // 
-            // pbwJahrVorwaerts
-            // 
-            this.pbwJahrVorwaerts.Image = global::Kalender.Properties.Resources.right_arrow;
-            this.pbwJahrVorwaerts.Location = new System.Drawing.Point(938, 11);
-            this.pbwJahrVorwaerts.Name = "pbwJahrVorwaerts";
-            this.pbwJahrVorwaerts.Size = new System.Drawing.Size(20, 20);
-            this.pbwJahrVorwaerts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbwJahrVorwaerts.TabIndex = 14;
-            this.pbwJahrVorwaerts.TabStop = false;
-            // 
-            // pbmVorwaerts
-            // 
-            this.pbmVorwaerts.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbmVorwaerts.Image = global::Kalender.Properties.Resources.right_arrow;
-            this.pbmVorwaerts.Location = new System.Drawing.Point(941, 11);
-            this.pbmVorwaerts.Name = "pbmVorwaerts";
-            this.pbmVorwaerts.Size = new System.Drawing.Size(20, 20);
-            this.pbmVorwaerts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbmVorwaerts.TabIndex = 16;
-            this.pbmVorwaerts.TabStop = false;
-            this.pbmVorwaerts.Click += new System.EventHandler(this.pbmVorwaerts_Click);
-            // 
-            // pbmzurueck
-            // 
-            this.pbmzurueck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbmzurueck.Image = global::Kalender.Properties.Resources.back;
-            this.pbmzurueck.Location = new System.Drawing.Point(863, 11);
-            this.pbmzurueck.Name = "pbmzurueck";
-            this.pbmzurueck.Size = new System.Drawing.Size(20, 20);
-            this.pbmzurueck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbmzurueck.TabIndex = 15;
-            this.pbmzurueck.TabStop = false;
-            this.pbmzurueck.Click += new System.EventHandler(this.pbmzurueck_Click);
+            this.txtSuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtSuche.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSuche.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F);
+            this.txtSuche.ForeColor = System.Drawing.Color.White;
+            this.txtSuche.Location = new System.Drawing.Point(195, 130);
+            this.txtSuche.MaxLength = 5;
+            this.txtSuche.Name = "txtSuche";
+            this.txtSuche.Size = new System.Drawing.Size(593, 26);
+            this.txtSuche.TabIndex = 11;
+            this.txtSuche.TextChanged += new System.EventHandler(this.TxtVon_TextChanged);
             // 
             // main
             // 
@@ -1380,16 +1448,18 @@
             this.Text = "main";
             this.Load += new System.EventHandler(this.main_Load);
             this.tabControlMain.ResumeLayout(false);
+            this.tabWoche.ResumeLayout(false);
+            this.tlpWoche.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrVorwaerts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrzurueck)).EndInit();
             this.tabMonat.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panMonatswahl.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.tlpWoche.ResumeLayout(false);
-            this.tabWoche.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrzurueck)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrVorwaerts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbmVorwaerts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbmzurueck)).EndInit();
+            this.tabSuche.ResumeLayout(false);
+            this.tabSuche.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1487,5 +1557,11 @@
         private System.Windows.Forms.PictureBox pbwJahrVorwaerts;
         private System.Windows.Forms.PictureBox pbmVorwaerts;
         private System.Windows.Forms.PictureBox pbmzurueck;
+        private System.Windows.Forms.ListView LVsuche;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtSuche;
     }
 }

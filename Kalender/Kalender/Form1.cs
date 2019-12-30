@@ -42,6 +42,7 @@ namespace Kalender
             {
                 MessageBox.Show(ex.Message);
             }
+            frmain.SuchListViewRefresh("");
 
         }
         internal List<Termin> arrTermine = new List<Termin>();
@@ -78,6 +79,7 @@ namespace Kalender
             panMain1.Location = new Point(54, 36);
 
             frmain = new main() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmain.frm = this;
             sideNav.BringToFront();
             panMain1.Controls.Add(frmain);
             frmain.Show();
@@ -217,6 +219,11 @@ namespace Kalender
             {
                 MessageBox.Show(t.Monat.ToString());
             }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            frmain.SuchListViewRefresh("");
         }
     }
 
