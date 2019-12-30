@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace Kalender
 {
@@ -19,13 +21,28 @@ namespace Kalender
             InitializeComponent();
         }
 
+
+        private XmlSerializer serializer;
+
         private void Form1_Load(object sender, EventArgs e)
         {
             basicDesigns();
             combineForms();
-            TerminHinzufuegen th = new TerminHinzufuegen(2019, 11, 30);
+            TerminHinzufuegen th = new TerminHinzufuegen();
             th.f1 = this;
             th.Show();
+            serializer = new XmlSerializer(arrTermine.GetType());
+            try
+            {
+                FileStream fs = new FileStream(Application.StartupPath + "\\Termine.xml", FileMode.Open, FileAccess.Read, FileShare.None);
+                arrTermine = (List<Termin>)serializer.Deserialize(fs);
+                fs.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
         internal List<Termin> arrTermine = new List<Termin>();
         //ColorScheme

@@ -7,18 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace Kalender
 {
     public partial class TerminHinzufuegen : Form
     {
-        public TerminHinzufuegen(int jahr, int monat, int tag)
+        public TerminHinzufuegen(/*int jahr, int monat, int tag*/)
         {
             InitializeComponent();
-            this.jahr = jahr;
+            /*this.jahr = jahr;
             this.monat = monat;
-            this.tag = tag;
+            this.tag = tag;*/
         }
+        
         internal Form1 f1;
         internal Color grauMittel = ColorTranslator.FromHtml("#414141");
         internal Color Hauptfarbe1 = ColorTranslator.FromHtml("#ca3e47");
@@ -35,12 +38,13 @@ namespace Kalender
         int jahr = 2019;
         int monat = 12;
         int tag = 30;
-
+        private XmlSerializer serializer;
 
         private void TerminHinzufuegen_Load(object sender, EventArgs e)
         {
             this.BackColor = grauDunkel1;
             PnlHeader.BackColor = HeaderGrau;
+            serializer = new XmlSerializer(f1.arrTermine.GetType());
         }
 
         //Dragable machen
@@ -208,6 +212,8 @@ namespace Kalender
                 txtBis.Text = "";
                 lblVon.ForeColor = ColorTranslator.FromHtml("#bfbfbf");
                 lblBis.ForeColor = ColorTranslator.FromHtml("#bfbfbf");
+                pbAlarm1.Visible = false;
+                pbAlarm2.Visible = false;
                 GanzTag = true;
             }
             if (chkGanz.Checked == false)
@@ -232,6 +238,17 @@ namespace Kalender
                     int vonInMin = (Convert.ToInt32(txtVon.Text.Substring(0, 2).ToString()) * 60) + (Convert.ToInt32(txtVon.Text.Substring(3, 2).ToString()));
                     int bisInMin = (Convert.ToInt32(txtBis.Text.Substring(0, 2).ToString()) * 60) + (Convert.ToInt32(txtBis.Text.Substring(3, 2).ToString()));
                     f1.arrTermine.Add(new Termin(txtTitel.Text, txtNotizen.Text, jahr, monat, tag, false, vonInMin, bisInMin));
+                    try
+                    {
+                        FileStream fs = new FileStream(Application.StartupPath + "\\Termine.xml", FileMode.Create, FileAccess.Write, FileShare.None);
+                        serializer.Serialize(fs, f1.arrTermine);
+                        fs.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
                     this.Close();
                 } else if (GanzTag == true)
                 {

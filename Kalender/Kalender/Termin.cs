@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kalender
 {
-    internal class Termin
+    public class Termin
     {
         //Objektvariablen
         protected string terName;
