@@ -139,6 +139,11 @@ namespace Kalender
             datumAufButtons();
         }
 
+        private void TabMonat_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private int selectedMonat = DateTime.Today.Month;
         private int selectedJahr = DateTime.Today.Year;
         private int wochentag;
