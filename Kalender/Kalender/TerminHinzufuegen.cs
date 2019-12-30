@@ -201,6 +201,8 @@ namespace Kalender
                 panel3.BackColor = ColorTranslator.FromHtml("#bfbfbf");
                 txtVon.Enabled = false;
                 txtBis.Enabled = false;
+                txtVon.Text = "";
+                txtBis.Text = "";
                 lblVon.ForeColor = ColorTranslator.FromHtml("#bfbfbf");
                 lblBis.ForeColor = ColorTranslator.FromHtml("#bfbfbf");
                 GanzTag = true;
