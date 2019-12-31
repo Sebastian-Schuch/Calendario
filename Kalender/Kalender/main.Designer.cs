@@ -31,6 +31,12 @@
             this.tabControlMain = new MaterialSkin.Controls.MaterialTabControl();
             this.tabTerminuebersicht = new System.Windows.Forms.TabPage();
             this.tabTag = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblTag = new System.Windows.Forms.Label();
             this.tabWoche = new System.Windows.Forms.TabPage();
             this.tlpWoche = new System.Windows.Forms.TableLayoutPanel();
             this.btnm2 = new System.Windows.Forms.Button();
@@ -120,13 +126,17 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.tabSuche = new System.Windows.Forms.TabPage();
-            this.LVsuche = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtSuche = new System.Windows.Forms.TextBox();
+            this.LVsuche = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControlMain.SuspendLayout();
+            this.tabTag.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabWoche.SuspendLayout();
             this.tlpWoche.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -167,13 +177,84 @@
             // 
             // tabTag
             // 
+            this.tabTag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.tabTag.Controls.Add(this.label2);
+            this.tabTag.Controls.Add(this.tableLayoutPanel2);
+            this.tabTag.Controls.Add(this.panel3);
             this.tabTag.Location = new System.Drawing.Point(4, 22);
             this.tabTag.Name = "tabTag";
             this.tabTag.Padding = new System.Windows.Forms.Padding(3);
             this.tabTag.Size = new System.Drawing.Size(1019, 742);
             this.tabTag.TabIndex = 1;
             this.tabTag.Text = "Tag";
-            this.tabTag.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(372, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(262, 24);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "+ Termin hinzufügen";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(150, 85);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(694, 580);
+            this.tableLayoutPanel2.TabIndex = 28;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.lblTag);
+            this.panel3.Location = new System.Drawing.Point(-4, 1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1016, 43);
+            this.panel3.TabIndex = 27;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Kalender.Properties.Resources.right_arrow;
+            this.pictureBox1.Location = new System.Drawing.Point(556, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Kalender.Properties.Resources.back;
+            this.pictureBox2.Location = new System.Drawing.Point(433, 13);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblTag
+            // 
+            this.lblTag.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblTag.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTag.ForeColor = System.Drawing.Color.White;
+            this.lblTag.Location = new System.Drawing.Point(397, 3);
+            this.lblTag.Name = "lblTag";
+            this.lblTag.Size = new System.Drawing.Size(219, 40);
+            this.lblTag.TabIndex = 0;
+            this.lblTag.Text = "01.01.2019";
+            this.lblTag.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabWoche
             // 
@@ -1378,6 +1459,28 @@
             this.tabSuche.TabIndex = 4;
             this.tabSuche.Text = "Suche";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(195, 162);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(590, 2);
+            this.panel2.TabIndex = 12;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
+            // 
+            // txtSuche
+            // 
+            this.txtSuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtSuche.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSuche.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F);
+            this.txtSuche.ForeColor = System.Drawing.Color.White;
+            this.txtSuche.Location = new System.Drawing.Point(195, 130);
+            this.txtSuche.MaxLength = 5;
+            this.txtSuche.Name = "txtSuche";
+            this.txtSuche.Size = new System.Drawing.Size(593, 26);
+            this.txtSuche.TabIndex = 11;
+            this.txtSuche.TextChanged += new System.EventHandler(this.TxtVon_TextChanged);
+            // 
             // LVsuche
             // 
             this.LVsuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
@@ -1403,39 +1506,17 @@
             this.columnHeader1.Text = "";
             this.columnHeader1.Width = 0;
             // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Datum";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 300;
-            // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Termin";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader3.Width = 291;
             // 
-            // panel2
+            // columnHeader2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(195, 162);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(590, 2);
-            this.panel2.TabIndex = 12;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
-            // 
-            // txtSuche
-            // 
-            this.txtSuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtSuche.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSuche.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F);
-            this.txtSuche.ForeColor = System.Drawing.Color.White;
-            this.txtSuche.Location = new System.Drawing.Point(195, 130);
-            this.txtSuche.MaxLength = 5;
-            this.txtSuche.Name = "txtSuche";
-            this.txtSuche.Size = new System.Drawing.Size(593, 26);
-            this.txtSuche.TabIndex = 11;
-            this.txtSuche.TextChanged += new System.EventHandler(this.TxtVon_TextChanged);
+            this.columnHeader2.Text = "Datum";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 300;
             // 
             // main
             // 
@@ -1448,6 +1529,10 @@
             this.Text = "main";
             this.Load += new System.EventHandler(this.main_Load);
             this.tabControlMain.ResumeLayout(false);
+            this.tabTag.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabWoche.ResumeLayout(false);
             this.tlpWoche.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -1563,5 +1648,11 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtSuche;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblTag;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label2;
     }
 }

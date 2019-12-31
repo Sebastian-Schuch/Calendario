@@ -24,10 +24,19 @@ namespace Kalender
             datumAufButtons();
             farblichHinterlegen("lbl" + selectedMonat.ToString());
             SuchListViewRefresh("");
+            AddClickEventToButtons();
+            TagRefresh(selectedJahr, selectedMonat, selectedTag);
         }
 
 
-
+        private void AddClickEventToButtons()
+        {
+            for (int i = 1; i <= 42; i++)
+            {
+                Button btn = this.Controls.Find("button" + i.ToString(), true).FirstOrDefault() as Button;
+                btn.Click += (sender, args) => ButtonPressRefreshTag(Convert.ToInt32(btn.Text));
+            }
+        }
 
         internal void ChangeTab(string tab)
         {
@@ -67,7 +76,7 @@ namespace Kalender
 
         }
 
-        private int jahr, monat, tag, selectedTag, tageAnzahlMonat;
+        private int jahr, monat, tag, selectedTag = DateTime.Today.Day, tageAnzahlMonat;
 
         private void farblichHinterlegen(string lblName)
         {
@@ -236,6 +245,13 @@ namespace Kalender
             }
         }
 
+        private void Label2_Click(object sender, EventArgs e)
+        {
+            TerminHinzufuegen th = new TerminHinzufuegen(selectedJahr, selectedMonat, selectedTag);
+            th.f1 = frm;
+            th.Show();
+        }
+
         internal void SuchListViewRefresh(string filter)
         {
             if (filter.Equals(""))
@@ -271,6 +287,40 @@ namespace Kalender
             }
 
         }
+
+
+        List<Termin> tempListe = new List<Termin>();
+        internal void TagRefresh(int jahr, int monat, int tag)
+        {
+            tempListe.Clear();
+
+            foreach(Termin t in frm.arrTermine)
+            {
+                if (t.Jahr == jahr && t.Monat == monat && t.Tag == tag)
+                {
+                    tempListe.Add(t);
+                    
+                }
+            }
+            lblTag.Text = tag + "." + monat + "." + jahr;
+
+            //tempListe enthält alle Termine von dem Ausgewählten Tag (Muss noch in irgendeiner form ausgegeben werden)
+
+
+        }
+
+        private void ButtonPressRefreshTag(int tag)
+        {
+            if (Convert.ToInt32(tag) >= 1 && Convert.ToInt32(tag) < 32)
+            {
+                tabControlMain.SelectedTab = tabTag;
+                TagRefresh(selectedJahr, selectedMonat, tag);
+                selectedTag = tag;
+            }
+
+        }
+
+
         private void TxtVon_TextChanged(object sender, EventArgs e)
         {
             SuchListViewRefresh(txtSuche.Text);

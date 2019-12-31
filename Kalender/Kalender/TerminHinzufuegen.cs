@@ -14,12 +14,12 @@ namespace Kalender
 {
     public partial class TerminHinzufuegen : Form
     {
-        public TerminHinzufuegen(/*int jahr, int monat, int tag*/)
+        public TerminHinzufuegen(int jahr, int monat, int tag)
         {
             InitializeComponent();
-            /*this.jahr = jahr;
+            this.jahr = jahr;
             this.monat = monat;
-            this.tag = tag;*/
+            this.tag = tag;
         }
         
         internal Form1 f1;
