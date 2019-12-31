@@ -28,9 +28,6 @@ namespace Kalender
         {
             basicDesigns();
             combineForms();
-            TerminHinzufuegen th = new TerminHinzufuegen(2019,12,3);
-            th.f1 = this;
-            th.Show();
             serializer = new XmlSerializer(arrTermine.GetType());
             try
             {

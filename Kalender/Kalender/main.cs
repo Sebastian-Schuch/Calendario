@@ -249,7 +249,7 @@ namespace Kalender
         {
             TerminHinzufuegen th = new TerminHinzufuegen(selectedJahr, selectedMonat, selectedTag);
             th.f1 = frm;
-            th.Show();
+            th.ShowDialog();
         }
 
         internal void SuchListViewRefresh(string filter)

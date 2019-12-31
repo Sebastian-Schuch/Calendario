@@ -253,6 +253,16 @@ namespace Kalender
                 } else if (GanzTag == true)
                 {
                     f1.arrTermine.Add(new Termin(txtTitel.Text, txtNotizen.Text, jahr, monat, tag, true, 0, 0));
+                    try
+                    {
+                        FileStream fs = new FileStream(Application.StartupPath + "\\Termine.xml", FileMode.Create, FileAccess.Write, FileShare.None);
+                        serializer.Serialize(fs, f1.arrTermine);
+                        fs.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                     this.Close();
                 }
                 
