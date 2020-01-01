@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tabControlMain = new MaterialSkin.Controls.MaterialTabControl();
-            this.tabTerminuebersicht = new System.Windows.Forms.TabPage();
             this.tabTag = new System.Windows.Forms.TabPage();
             this.ListViewTag = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -44,8 +43,6 @@
             this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTag = new System.Windows.Forms.Label();
             this.tabWoche = new System.Windows.Forms.TabPage();
             this.tlpWoche = new System.Windows.Forms.TableLayoutPanel();
@@ -56,11 +53,6 @@
             this.btnm4 = new System.Windows.Forms.Button();
             this.btnm3 = new System.Windows.Forms.Button();
             this.btnm1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pbwJahrVorwaerts = new System.Windows.Forms.PictureBox();
-            this.pbwJahrzurueck = new System.Windows.Forms.PictureBox();
-            this.lblmJahr = new System.Windows.Forms.Label();
-            this.lblwMonat = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -113,8 +105,6 @@
             this.button41 = new System.Windows.Forms.Button();
             this.button42 = new System.Windows.Forms.Button();
             this.panMonatswahl = new System.Windows.Forms.Panel();
-            this.pbmVorwaerts = new System.Windows.Forms.PictureBox();
-            this.pbmzurueck = new System.Windows.Forms.PictureBox();
             this.lblJahr = new System.Windows.Forms.Label();
             this.lbl12 = new System.Windows.Forms.Label();
             this.lbl7 = new System.Windows.Forms.Label();
@@ -142,31 +132,39 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbmVorwaerts = new System.Windows.Forms.PictureBox();
+            this.pbmzurueck = new System.Windows.Forms.PictureBox();
+            this.lblwMonat = new System.Windows.Forms.Label();
+            this.lblmJahr = new System.Windows.Forms.Label();
+            this.pbwJahrzurueck = new System.Windows.Forms.PictureBox();
+            this.pbwJahrVorwaerts = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControlMain.SuspendLayout();
             this.tabTag.SuspendLayout();
             this.strip.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabWoche.SuspendLayout();
             this.tlpWoche.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrVorwaerts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrzurueck)).BeginInit();
             this.tabMonat.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panMonatswahl.SuspendLayout();
+            this.tabSuche.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbmVorwaerts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbmzurueck)).BeginInit();
-            this.tabSuche.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrzurueck)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrVorwaerts)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlMain
             // 
-            this.tabControlMain.Controls.Add(this.tabTerminuebersicht);
+            this.tabControlMain.Controls.Add(this.tabMonat);
             this.tabControlMain.Controls.Add(this.tabTag);
             this.tabControlMain.Controls.Add(this.tabWoche);
-            this.tabControlMain.Controls.Add(this.tabMonat);
             this.tabControlMain.Controls.Add(this.tabSuche);
             this.tabControlMain.Depth = 0;
             this.tabControlMain.Location = new System.Drawing.Point(-7, 0);
@@ -175,16 +173,6 @@
             this.tabControlMain.SelectedIndex = 0;
             this.tabControlMain.Size = new System.Drawing.Size(1027, 768);
             this.tabControlMain.TabIndex = 1;
-            // 
-            // tabTerminuebersicht
-            // 
-            this.tabTerminuebersicht.Location = new System.Drawing.Point(4, 22);
-            this.tabTerminuebersicht.Name = "tabTerminuebersicht";
-            this.tabTerminuebersicht.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTerminuebersicht.Size = new System.Drawing.Size(1019, 742);
-            this.tabTerminuebersicht.TabIndex = 0;
-            this.tabTerminuebersicht.Text = "Terminübersicht";
-            this.tabTerminuebersicht.UseVisualStyleBackColor = true;
             // 
             // tabTag
             // 
@@ -263,7 +251,7 @@
             this.bearbeitenToolStripMenuItem1,
             this.löschenToolStripMenuItem});
             this.strip.Name = "strip";
-            this.strip.Size = new System.Drawing.Size(181, 92);
+            this.strip.Size = new System.Drawing.Size(131, 70);
             // 
             // bearbeitenToolStripMenuItem
             // 
@@ -275,14 +263,14 @@
             // bearbeitenToolStripMenuItem1
             // 
             this.bearbeitenToolStripMenuItem1.Name = "bearbeitenToolStripMenuItem1";
-            this.bearbeitenToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.bearbeitenToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.bearbeitenToolStripMenuItem1.Text = "Bearbeiten";
             this.bearbeitenToolStripMenuItem1.Click += new System.EventHandler(this.BearbeitenToolStripMenuItem1_Click);
             // 
             // löschenToolStripMenuItem
             // 
             this.löschenToolStripMenuItem.Name = "löschenToolStripMenuItem";
-            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.löschenToolStripMenuItem.Text = "Löschen";
             this.löschenToolStripMenuItem.Click += new System.EventHandler(this.LöschenToolStripMenuItem_Click);
             // 
@@ -308,28 +296,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1016, 43);
             this.panel3.TabIndex = 27;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
-            this.pictureBox1.Image = global::Kalender.Properties.Resources.right_arrow;
-            this.pictureBox1.Location = new System.Drawing.Point(556, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.No;
-            this.pictureBox2.Image = global::Kalender.Properties.Resources.back;
-            this.pictureBox2.Location = new System.Drawing.Point(433, 13);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
             // 
             // lblTag
             // 
@@ -480,62 +446,6 @@
             this.btnm1.TabIndex = 20;
             this.btnm1.Text = "1";
             this.btnm1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel1.Controls.Add(this.pbwJahrVorwaerts);
-            this.panel1.Controls.Add(this.pbwJahrzurueck);
-            this.panel1.Controls.Add(this.lblmJahr);
-            this.panel1.Controls.Add(this.lblwMonat);
-            this.panel1.Location = new System.Drawing.Point(-1, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1016, 43);
-            this.panel1.TabIndex = 26;
-            // 
-            // pbwJahrVorwaerts
-            // 
-            this.pbwJahrVorwaerts.Image = global::Kalender.Properties.Resources.right_arrow;
-            this.pbwJahrVorwaerts.Location = new System.Drawing.Point(938, 11);
-            this.pbwJahrVorwaerts.Name = "pbwJahrVorwaerts";
-            this.pbwJahrVorwaerts.Size = new System.Drawing.Size(20, 20);
-            this.pbwJahrVorwaerts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbwJahrVorwaerts.TabIndex = 14;
-            this.pbwJahrVorwaerts.TabStop = false;
-            // 
-            // pbwJahrzurueck
-            // 
-            this.pbwJahrzurueck.Image = global::Kalender.Properties.Resources.back;
-            this.pbwJahrzurueck.Location = new System.Drawing.Point(864, 11);
-            this.pbwJahrzurueck.Name = "pbwJahrzurueck";
-            this.pbwJahrzurueck.Size = new System.Drawing.Size(20, 20);
-            this.pbwJahrzurueck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbwJahrzurueck.TabIndex = 13;
-            this.pbwJahrzurueck.TabStop = false;
-            // 
-            // lblmJahr
-            // 
-            this.lblmJahr.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblmJahr.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmJahr.ForeColor = System.Drawing.Color.White;
-            this.lblmJahr.Location = new System.Drawing.Point(876, 0);
-            this.lblmJahr.Name = "lblmJahr";
-            this.lblmJahr.Size = new System.Drawing.Size(74, 40);
-            this.lblmJahr.TabIndex = 12;
-            this.lblmJahr.Text = "2019";
-            this.lblmJahr.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblwMonat
-            // 
-            this.lblwMonat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblwMonat.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblwMonat.ForeColor = System.Drawing.Color.White;
-            this.lblwMonat.Location = new System.Drawing.Point(397, 1);
-            this.lblwMonat.Name = "lblwMonat";
-            this.lblwMonat.Size = new System.Drawing.Size(219, 40);
-            this.lblwMonat.TabIndex = 0;
-            this.lblwMonat.Text = "Monat";
-            this.lblwMonat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label21
             // 
@@ -1265,30 +1175,6 @@
             this.panMonatswahl.Size = new System.Drawing.Size(1016, 43);
             this.panMonatswahl.TabIndex = 16;
             // 
-            // pbmVorwaerts
-            // 
-            this.pbmVorwaerts.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbmVorwaerts.Image = global::Kalender.Properties.Resources.right_arrow;
-            this.pbmVorwaerts.Location = new System.Drawing.Point(941, 11);
-            this.pbmVorwaerts.Name = "pbmVorwaerts";
-            this.pbmVorwaerts.Size = new System.Drawing.Size(20, 20);
-            this.pbmVorwaerts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbmVorwaerts.TabIndex = 16;
-            this.pbmVorwaerts.TabStop = false;
-            this.pbmVorwaerts.Click += new System.EventHandler(this.pbmVorwaerts_Click);
-            // 
-            // pbmzurueck
-            // 
-            this.pbmzurueck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbmzurueck.Image = global::Kalender.Properties.Resources.back;
-            this.pbmzurueck.Location = new System.Drawing.Point(863, 11);
-            this.pbmzurueck.Name = "pbmzurueck";
-            this.pbmzurueck.Size = new System.Drawing.Size(20, 20);
-            this.pbmzurueck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbmzurueck.TabIndex = 15;
-            this.pbmzurueck.TabStop = false;
-            this.pbmzurueck.Click += new System.EventHandler(this.pbmzurueck_Click);
-            // 
             // lblJahr
             // 
             this.lblJahr.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1605,6 +1491,108 @@
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader2.Width = 300;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
+            this.pictureBox1.Image = global::Kalender.Properties.Resources.right_arrow;
+            this.pictureBox1.Location = new System.Drawing.Point(556, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.No;
+            this.pictureBox2.Image = global::Kalender.Properties.Resources.back;
+            this.pictureBox2.Location = new System.Drawing.Point(433, 13);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pbmVorwaerts
+            // 
+            this.pbmVorwaerts.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbmVorwaerts.Image = global::Kalender.Properties.Resources.right_arrow;
+            this.pbmVorwaerts.Location = new System.Drawing.Point(941, 11);
+            this.pbmVorwaerts.Name = "pbmVorwaerts";
+            this.pbmVorwaerts.Size = new System.Drawing.Size(20, 20);
+            this.pbmVorwaerts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbmVorwaerts.TabIndex = 16;
+            this.pbmVorwaerts.TabStop = false;
+            this.pbmVorwaerts.Click += new System.EventHandler(this.pbmVorwaerts_Click);
+            // 
+            // pbmzurueck
+            // 
+            this.pbmzurueck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbmzurueck.Image = global::Kalender.Properties.Resources.back;
+            this.pbmzurueck.Location = new System.Drawing.Point(863, 11);
+            this.pbmzurueck.Name = "pbmzurueck";
+            this.pbmzurueck.Size = new System.Drawing.Size(20, 20);
+            this.pbmzurueck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbmzurueck.TabIndex = 15;
+            this.pbmzurueck.TabStop = false;
+            this.pbmzurueck.Click += new System.EventHandler(this.pbmzurueck_Click);
+            // 
+            // lblwMonat
+            // 
+            this.lblwMonat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblwMonat.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblwMonat.ForeColor = System.Drawing.Color.White;
+            this.lblwMonat.Location = new System.Drawing.Point(397, 1);
+            this.lblwMonat.Name = "lblwMonat";
+            this.lblwMonat.Size = new System.Drawing.Size(219, 40);
+            this.lblwMonat.TabIndex = 0;
+            this.lblwMonat.Text = "Monat";
+            this.lblwMonat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblmJahr
+            // 
+            this.lblmJahr.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblmJahr.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmJahr.ForeColor = System.Drawing.Color.White;
+            this.lblmJahr.Location = new System.Drawing.Point(876, 0);
+            this.lblmJahr.Name = "lblmJahr";
+            this.lblmJahr.Size = new System.Drawing.Size(74, 40);
+            this.lblmJahr.TabIndex = 12;
+            this.lblmJahr.Text = "2019";
+            this.lblmJahr.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pbwJahrzurueck
+            // 
+            this.pbwJahrzurueck.Image = global::Kalender.Properties.Resources.back;
+            this.pbwJahrzurueck.Location = new System.Drawing.Point(864, 11);
+            this.pbwJahrzurueck.Name = "pbwJahrzurueck";
+            this.pbwJahrzurueck.Size = new System.Drawing.Size(20, 20);
+            this.pbwJahrzurueck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbwJahrzurueck.TabIndex = 13;
+            this.pbwJahrzurueck.TabStop = false;
+            // 
+            // pbwJahrVorwaerts
+            // 
+            this.pbwJahrVorwaerts.Image = global::Kalender.Properties.Resources.right_arrow;
+            this.pbwJahrVorwaerts.Location = new System.Drawing.Point(938, 11);
+            this.pbwJahrVorwaerts.Name = "pbwJahrVorwaerts";
+            this.pbwJahrVorwaerts.Size = new System.Drawing.Size(20, 20);
+            this.pbwJahrVorwaerts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbwJahrVorwaerts.TabIndex = 14;
+            this.pbwJahrVorwaerts.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.pbwJahrVorwaerts);
+            this.panel1.Controls.Add(this.pbwJahrzurueck);
+            this.panel1.Controls.Add(this.lblmJahr);
+            this.panel1.Controls.Add(this.lblwMonat);
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1016, 43);
+            this.panel1.TabIndex = 26;
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1619,27 +1607,26 @@
             this.tabTag.ResumeLayout(false);
             this.strip.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabWoche.ResumeLayout(false);
             this.tlpWoche.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrVorwaerts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrzurueck)).EndInit();
             this.tabMonat.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panMonatswahl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbmVorwaerts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbmzurueck)).EndInit();
             this.tabSuche.ResumeLayout(false);
             this.tabSuche.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbmVorwaerts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbmzurueck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrzurueck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrVorwaerts)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         internal MaterialSkin.Controls.MaterialTabControl tabControlMain;
-        internal System.Windows.Forms.TabPage tabTerminuebersicht;
         internal System.Windows.Forms.TabPage tabTag;
         internal System.Windows.Forms.TabPage tabMonat;
         internal System.Windows.Forms.TabPage tabSuche;
@@ -1716,9 +1703,6 @@
         private System.Windows.Forms.Button btnm4;
         private System.Windows.Forms.Button btnm3;
         private System.Windows.Forms.Button btnm1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblmJahr;
-        private System.Windows.Forms.Label lblwMonat;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
@@ -1726,8 +1710,6 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.PictureBox pbwJahrzurueck;
-        private System.Windows.Forms.PictureBox pbwJahrVorwaerts;
         private System.Windows.Forms.PictureBox pbmVorwaerts;
         private System.Windows.Forms.PictureBox pbmzurueck;
         private System.Windows.Forms.ListView LVsuche;
@@ -1751,5 +1733,10 @@
         private System.Windows.Forms.ToolStripMenuItem löschenToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pbwJahrVorwaerts;
+        private System.Windows.Forms.PictureBox pbwJahrzurueck;
+        private System.Windows.Forms.Label lblmJahr;
+        private System.Windows.Forms.Label lblwMonat;
     }
 }

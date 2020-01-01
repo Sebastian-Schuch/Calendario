@@ -52,12 +52,7 @@ namespace Kalender
 
         internal void ChangeTab(string tab)
         {
-
-            if (tab.Equals("uebersicht"))
-            {
-                tabControlMain.SelectedTab = tabTerminuebersicht;
-            }
-            else if (tab.Equals("tag"))
+            if (tab.Equals("tag"))
             {
                 tabControlMain.SelectedTab = tabTag;
             }

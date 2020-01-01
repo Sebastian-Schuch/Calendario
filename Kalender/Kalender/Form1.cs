@@ -239,6 +239,26 @@ namespace Kalender
         {
             frmain.SuchListViewRefresh("");
         }
+
+        private void PictureBox7_Click(object sender, EventArgs e)
+        {
+            frmain.ChangeTab("suche");
+        }
+
+        private void PictureBox6_Click(object sender, EventArgs e)
+        {
+            frmain.ChangeTab("monat");
+        }
+
+        private void PictureBox5_Click(object sender, EventArgs e)
+        {
+            frmain.ChangeTab("woche");
+        }
+
+        private void PictureBox4_Click(object sender, EventArgs e)
+        {
+            frmain.ChangeTab("tag");
+        }
     }
 
 }
