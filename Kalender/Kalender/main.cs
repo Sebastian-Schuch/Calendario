@@ -25,7 +25,16 @@ namespace Kalender
             farblichHinterlegen("lbl" + selectedMonat.ToString());
             SuchListViewRefresh("");
             AddClickEventToButtons();
+            /*
+            tblLayout.ColumnCount = 3;
+            tblLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
+            tblLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
+            tblLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
+            tblLayout.RowStyles[0] = (new RowStyle(SizeType.Absolute, 30F));
+            */
             TagRefresh(selectedJahr, selectedMonat, selectedTag);
+
+
         }
 
 
@@ -206,7 +215,7 @@ namespace Kalender
 
         private void datumAufButtons()
         {
-            selectedJahr = Convert.ToInt16(lblJahr.Text);
+            
             tageAnzahlMonat = Convert.ToInt32(DateTime.DaysInMonth(selectedJahr, selectedMonat));
             DateTime datum = new DateTime(selectedJahr, selectedMonat, 1);
             wochentag = Convert.ToInt16(datum.DayOfWeek);
@@ -262,7 +271,7 @@ namespace Kalender
                 {
                     lsItem = new ListViewItem("");
                     lsItem.SubItems.Add(t.TerNname);
-                    lsItem.SubItems.Add(t.Tag + "." + t.Monat + "." + t.Jahr);
+                    lsItem.SubItems.Add(t.ToString());
 
                     LVsuche.Items.Add(lsItem);
                 }
@@ -279,7 +288,7 @@ namespace Kalender
                    
                     lsItem = new ListViewItem("");
                     lsItem.SubItems.Add(t.TerNname);
-                    lsItem.SubItems.Add(t.Tag + "." + t.Monat + "." + t.Jahr);
+                    lsItem.SubItems.Add(t.ToString());
 
                     LVsuche.Items.Add(lsItem);
                     }
@@ -290,16 +299,98 @@ namespace Kalender
 
 
         List<Termin> tempListe = new List<Termin>();
+
+        private void BearbeitenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
         internal void TagRefresh(int jahr, int monat, int tag)
         {
             tempListe.Clear();
+            /*tblLayout.Controls.Clear();
+            tblLayout.RowStyles.Clear();
+            tblLayout.RowCount = 0;*/
 
-            foreach(Termin t in frm.arrTermine)
+            ListViewItem lsItem;
+            ListViewTag.Items.Clear();
+            foreach (Termin t in frm.arrTermine)
             {
                 if (t.Jahr == jahr && t.Monat == monat && t.Tag == tag)
                 {
                     tempListe.Add(t);
+
+                    /*tblLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+                    tblLayout.Controls.Add(new Label() { Text = t.TerNname }, 0, tblLayout.RowCount - 1);
+                    tblLayout.Controls.Add(new Label() { Text = t.Tag+"."+t.Monat+"."+t.Jahr }, 1, tblLayout.RowCount - 1);
                     
+                    Button edit = new Button();
+                    edit.Text = "Bearbeiten";
+                    edit.Click += (sender, args) => EditTermin(t.TerID);
+                    tblLayout.Controls.Add(edit, 2, tblLayout.RowCount - 1);
+                    tblLayout.RowCount = tblLayout.RowCount + 1;*/
+
+
+                    lsItem = new ListViewItem("");
+                    lsItem.SubItems.Add(t.TerNname);
+                    lsItem.SubItems.Add(t.ToString());
+                    int stunden = t.VonInMin / 60;
+                    int minuten = t.VonInMin % 60;
+                    string uhrzeit;
+                    if(stunden < 10)
+                    {
+                        uhrzeit = "0" + stunden;
+                    }
+                    else
+                    {
+                        uhrzeit = stunden.ToString();
+                    }
+                    if (minuten < 10)
+                    {
+                        uhrzeit += ":0" + minuten;
+                    }
+                    else
+                    {
+                        uhrzeit += ":" + minuten;
+                    }
+
+                    stunden = t.BisInMin / 60;
+                    minuten = t.BisInMin % 60;
+
+                    if (stunden < 10)
+                    {
+                        uhrzeit += " - 0" + stunden;
+                    }
+                    else
+                    {
+                        uhrzeit += " - "+stunden.ToString();
+                    }
+                    if (minuten < 10)
+                    {
+                        uhrzeit += ":0" + minuten;
+                    }
+                    else
+                    {
+                        uhrzeit += ":" + minuten;
+                    }
+
+                    lsItem.SubItems.Add(uhrzeit);
+
+
+
+                    if (t.TerGanztaegig == true)
+                    {
+                        lsItem.SubItems.Add("\u2611");
+                    }
+                    else
+                    {
+                        lsItem.SubItems.Add("\u2610");
+                    }
+                    
+                    ListViewTag.Items.Add(lsItem);
+                    
+
+
                 }
             }
             lblTag.Text = tag + "." + monat + "." + jahr;
@@ -308,6 +399,13 @@ namespace Kalender
 
 
         }
+
+
+        private void EditTermin(int id)
+        {
+            MessageBox.Show(id.ToString());
+        }
+
 
         private void ButtonPressRefreshTag(int tag)
         {

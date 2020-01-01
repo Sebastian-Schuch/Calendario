@@ -28,11 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControlMain = new MaterialSkin.Controls.MaterialTabControl();
             this.tabTerminuebersicht = new System.Windows.Forms.TabPage();
             this.tabTag = new System.Windows.Forms.TabPage();
+            this.ListViewTag = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.strip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.bearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bearbeitenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -134,6 +144,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControlMain.SuspendLayout();
             this.tabTag.SuspendLayout();
+            this.strip.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -178,8 +189,8 @@
             // tabTag
             // 
             this.tabTag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.tabTag.Controls.Add(this.ListViewTag);
             this.tabTag.Controls.Add(this.label2);
-            this.tabTag.Controls.Add(this.tableLayoutPanel2);
             this.tabTag.Controls.Add(this.panel3);
             this.tabTag.Location = new System.Drawing.Point(4, 22);
             this.tabTag.Name = "tabTag";
@@ -187,6 +198,89 @@
             this.tabTag.Size = new System.Drawing.Size(1019, 742);
             this.tabTag.TabIndex = 1;
             this.tabTag.Text = "Tag";
+            // 
+            // ListViewTag
+            // 
+            this.ListViewTag.AllowColumnReorder = true;
+            this.ListViewTag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.ListViewTag.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ListViewTag.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader8,
+            this.columnHeader7});
+            this.ListViewTag.ContextMenuStrip = this.strip;
+            this.ListViewTag.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F);
+            this.ListViewTag.ForeColor = System.Drawing.Color.White;
+            this.ListViewTag.FullRowSelect = true;
+            this.ListViewTag.HideSelection = false;
+            this.ListViewTag.Location = new System.Drawing.Point(197, 135);
+            this.ListViewTag.MultiSelect = false;
+            this.ListViewTag.Name = "ListViewTag";
+            this.ListViewTag.Scrollable = false;
+            this.ListViewTag.ShowGroups = false;
+            this.ListViewTag.Size = new System.Drawing.Size(593, 526);
+            this.ListViewTag.TabIndex = 30;
+            this.ListViewTag.UseCompatibleStateImageBehavior = false;
+            this.ListViewTag.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "";
+            this.columnHeader4.Width = 0;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Termin";
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader5.Width = 138;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Datum";
+            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader6.Width = 142;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Uhrzeit";
+            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader8.Width = 197;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Ganztägig";
+            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader7.Width = 115;
+            // 
+            // strip
+            // 
+            this.strip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bearbeitenToolStripMenuItem,
+            this.bearbeitenToolStripMenuItem1,
+            this.löschenToolStripMenuItem});
+            this.strip.Name = "strip";
+            this.strip.Size = new System.Drawing.Size(131, 70);
+            // 
+            // bearbeitenToolStripMenuItem
+            // 
+            this.bearbeitenToolStripMenuItem.Name = "bearbeitenToolStripMenuItem";
+            this.bearbeitenToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.bearbeitenToolStripMenuItem.Text = "Notizen";
+            this.bearbeitenToolStripMenuItem.Click += new System.EventHandler(this.BearbeitenToolStripMenuItem_Click);
+            // 
+            // bearbeitenToolStripMenuItem1
+            // 
+            this.bearbeitenToolStripMenuItem1.Name = "bearbeitenToolStripMenuItem1";
+            this.bearbeitenToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.bearbeitenToolStripMenuItem1.Text = "Bearbeiten";
+            // 
+            // löschenToolStripMenuItem
+            // 
+            this.löschenToolStripMenuItem.Name = "löschenToolStripMenuItem";
+            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.löschenToolStripMenuItem.Text = "Löschen";
             // 
             // label2
             // 
@@ -199,19 +293,6 @@
             this.label2.Text = "+ Termin hinzufügen";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.Label2_Click);
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(150, 85);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(694, 580);
-            this.tableLayoutPanel2.TabIndex = 28;
             // 
             // panel3
             // 
@@ -226,6 +307,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.pictureBox1.Image = global::Kalender.Properties.Resources.right_arrow;
             this.pictureBox1.Location = new System.Drawing.Point(556, 13);
             this.pictureBox1.Name = "pictureBox1";
@@ -236,6 +318,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.No;
             this.pictureBox2.Image = global::Kalender.Properties.Resources.back;
             this.pictureBox2.Location = new System.Drawing.Point(433, 13);
             this.pictureBox2.Name = "pictureBox2";
@@ -1211,7 +1294,7 @@
             this.lblJahr.Name = "lblJahr";
             this.lblJahr.Size = new System.Drawing.Size(89, 40);
             this.lblJahr.TabIndex = 12;
-            this.lblJahr.Text = "2019";
+            this.lblJahr.Text = "2020";
             this.lblJahr.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl12
@@ -1530,6 +1613,7 @@
             this.Load += new System.EventHandler(this.main_Load);
             this.tabControlMain.ResumeLayout(false);
             this.tabTag.ResumeLayout(false);
+            this.strip.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -1652,7 +1736,16 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblTag;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListView ListViewTag;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ContextMenuStrip strip;
+        private System.Windows.Forms.ToolStripMenuItem bearbeitenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bearbeitenToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem löschenToolStripMenuItem;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }

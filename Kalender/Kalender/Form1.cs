@@ -29,19 +29,36 @@ namespace Kalender
             basicDesigns();
             combineForms();
             serializer = new XmlSerializer(arrTermine.GetType());
+            FileStream fs;
             try
             {
-                FileStream fs = new FileStream(Application.StartupPath + "\\Termine.xml", FileMode.Open, FileAccess.Read, FileShare.None);
+                fs = new FileStream(Application.StartupPath + "\\Termine.xml", FileMode.Open, FileAccess.Read, FileShare.None);
+                try { 
                 arrTermine = (List<Termin>)serializer.Deserialize(fs);
+                }
+                catch { }
                 fs.Close();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            catch{     }
+            idSetzen();
             frmain.SuchListViewRefresh("");
 
+
         }
+        private void idSetzen()
+        {
+            int temp = 0;
+            foreach (Termin t in arrTermine)
+            {
+                if (t.TerID > temp)
+                {
+                    temp = t.TerID;
+                    Termin.Autonum = temp + 1;
+                }
+            }
+        }
+
+
         internal List<Termin> arrTermine = new List<Termin>();
         //ColorScheme
         internal Color bunt1 = Color.FromArgb(95, 174, 87);

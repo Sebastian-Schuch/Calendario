@@ -17,15 +17,18 @@ namespace Kalender
         protected int tag;
         protected int vonInMin;
         protected int bisInMin;
+        protected int terID;
         //Klassenvariablen
         private static int terAnzahl = 0;
-        private static int terID = 0;
+
+        private static int autonum = 0;
 
         public Termin() { }
 
         //Konstruktor
         public Termin(string terName, string terBeschreibung, int jahr, int monat, int tag, bool terGanztaegig, int vonInMin, int bisInMin)
         {
+            this.terID = autonum;
             this.terName = terName;
             this.terBeschreibung = terBeschreibung;
             this.jahr = jahr;
@@ -35,10 +38,17 @@ namespace Kalender
             this.bisInMin = bisInMin;
             this.terGanztaegig = terGanztaegig;
             terAnzahl++;
-            terID++;
+            autonum++;
         }
 
         //Properties
+        public int TerID
+        {
+            get => terID;
+            set => terID = value;
+        }
+
+
         public string TerNname
         {
             get => terName;
@@ -88,11 +98,15 @@ namespace Kalender
 
         //Klassenmethode
         public static int TerAnzahl => terAnzahl;
-        public static int TerID => terID;
+        public static int Autonum
+        {
+            get => autonum;
+            set => autonum = value;
+        }
 
         public override string ToString()
         {
-            return terID + terName + " " + terBeschreibung +  "\t" + terGanztaegig;
+            return tag + "." + monat + "." + jahr;
         }
     }
 
