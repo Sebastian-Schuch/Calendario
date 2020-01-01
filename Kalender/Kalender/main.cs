@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Xml.Serialization;
+using System.IO;
 namespace Kalender
 {
     public partial class main : Form
@@ -18,6 +19,7 @@ namespace Kalender
             InitializeComponent();
         }
 
+        private XmlSerializer serializer;
         private void main_Load(object sender, EventArgs e)
         {
             design();
@@ -25,6 +27,7 @@ namespace Kalender
             farblichHinterlegen("lbl" + selectedMonat.ToString());
             SuchListViewRefresh("");
             AddClickEventToButtons();
+            serializer = new XmlSerializer(frm.arrTermine.GetType());
             /*
             tblLayout.ColumnCount = 3;
             tblLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
@@ -311,6 +314,50 @@ namespace Kalender
             e.Cancel = true;
         }
 
+        private void BearbeitenToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try {
+                int iD = tempListe[ListViewTag.FocusedItem.Index].TerID;
+                TerminHinzufuegen th = new TerminHinzufuegen(true, iD);
+                th.f1 = frm;
+                th.ShowDialog();
+                TagRefresh(selectedJahr, selectedMonat, selectedTag);
+
+            }
+            catch { }
+
+
+        }
+
+        private void LöschenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int iD = tempListe[ListViewTag.FocusedItem.Index].TerID;
+                
+                for(int i = 0; i < frm.arrTermine.Count; i++)
+                {
+                    if (frm.arrTermine[i].TerID == iD)
+                    {
+                        frm.arrTermine.RemoveAt(i);
+                    }
+                }
+                try
+                {
+                    FileStream fs = new FileStream(Application.StartupPath + "\\Termine.xml", FileMode.Create, FileAccess.Write, FileShare.None);
+                    serializer.Serialize(fs, frm.arrTermine);
+                    fs.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                TagRefresh(selectedJahr, selectedMonat, selectedTag);
+
+            }
+            catch { }
+        }
+
         internal void TagRefresh(int jahr, int monat, int tag)
         {
             tempListe.Clear();
@@ -401,7 +448,7 @@ namespace Kalender
             }
             lblTag.Text = tag + "." + monat + "." + jahr;
 
-            //tempListe enthält alle Termine von dem Ausgewählten Tag (Muss noch in irgendeiner form ausgegeben werden)
+            
 
 
         }

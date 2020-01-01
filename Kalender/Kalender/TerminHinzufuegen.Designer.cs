@@ -336,6 +336,7 @@
             this.Controls.Add(this.PnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TerminHinzufuegen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TerminHinzufuegen";
             this.Load += new System.EventHandler(this.TerminHinzufuegen_Load);
             this.PnlHeader.ResumeLayout(false);

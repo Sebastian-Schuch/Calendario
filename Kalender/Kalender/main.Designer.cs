@@ -263,7 +263,7 @@
             this.bearbeitenToolStripMenuItem1,
             this.löschenToolStripMenuItem});
             this.strip.Name = "strip";
-            this.strip.Size = new System.Drawing.Size(131, 70);
+            this.strip.Size = new System.Drawing.Size(181, 92);
             // 
             // bearbeitenToolStripMenuItem
             // 
@@ -275,14 +275,16 @@
             // bearbeitenToolStripMenuItem1
             // 
             this.bearbeitenToolStripMenuItem1.Name = "bearbeitenToolStripMenuItem1";
-            this.bearbeitenToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.bearbeitenToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.bearbeitenToolStripMenuItem1.Text = "Bearbeiten";
+            this.bearbeitenToolStripMenuItem1.Click += new System.EventHandler(this.BearbeitenToolStripMenuItem1_Click);
             // 
             // löschenToolStripMenuItem
             // 
             this.löschenToolStripMenuItem.Name = "löschenToolStripMenuItem";
-            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.löschenToolStripMenuItem.Text = "Löschen";
+            this.löschenToolStripMenuItem.Click += new System.EventHandler(this.LöschenToolStripMenuItem_Click);
             // 
             // label2
             // 

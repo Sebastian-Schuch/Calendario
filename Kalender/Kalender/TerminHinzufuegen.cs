@@ -14,6 +14,13 @@ namespace Kalender
 {
     public partial class TerminHinzufuegen : Form
     {
+        public TerminHinzufuegen(bool edit, int id)
+        {
+            InitializeComponent();
+            this.edit = edit;
+            this.id = id;
+        }
+
         public TerminHinzufuegen(int jahr, int monat, int tag)
         {
             InitializeComponent();
@@ -22,6 +29,8 @@ namespace Kalender
             this.tag = tag;
         }
         
+
+
         internal Form1 f1;
         internal Color grauMittel = ColorTranslator.FromHtml("#414141");
         internal Color Hauptfarbe1 = ColorTranslator.FromHtml("#ca3e47");
@@ -29,6 +38,8 @@ namespace Kalender
         internal Color grauDunkel2 = ColorTranslator.FromHtml("#252525");
         internal Color grauDunkel1 = ColorTranslator.FromHtml("#313131");
 
+        int id;
+        bool edit=false;
         bool rightDateVon = false;
         bool rightDateBis = false;
         bool GanzTag = false;
@@ -45,6 +56,68 @@ namespace Kalender
             this.BackColor = grauDunkel1;
             PnlHeader.BackColor = HeaderGrau;
             serializer = new XmlSerializer(f1.arrTermine.GetType());
+            if(edit == true)
+            {
+                foreach(Termin t in f1.arrTermine)
+                {
+                    if(t.TerID == id)
+                    {
+                        txtTitel.Text = t.TerNname;
+                        int stunden = t.VonInMin / 60;
+                        int minuten = t.VonInMin % 60;
+                        string uhrzeit;
+                        if (stunden < 10)
+                        {
+                            uhrzeit = "0" + stunden;
+                        }
+                        else
+                        {
+                            uhrzeit = stunden.ToString();
+                        }
+                        if (minuten < 10)
+                        {
+                            uhrzeit += ":0" + minuten;
+                        }
+                        else
+                        {
+                            uhrzeit += ":" + minuten;
+                        }
+
+                        txtVon.Text = uhrzeit;
+
+                        stunden = t.BisInMin / 60;
+                        minuten = t.BisInMin % 60;
+
+                        if (stunden < 10)
+                        {
+                            uhrzeit = "0" +stunden;
+                        }
+                        else
+                        {
+                            uhrzeit = stunden.ToString();
+                        }
+                        if (minuten < 10)
+                        {
+                            uhrzeit += ":0" + minuten;
+                        }
+                        else
+                        {
+                            uhrzeit += ":" + minuten;
+                        }
+
+                        txtBis.Text = uhrzeit;
+
+                        if (t.TerGanztaegig == true)
+                        {
+                            chkGanz.Checked = true;
+                            GanzTag = true;
+                        }
+                        
+                        txtNotizen.Text = t.TerBeschreibung;
+                        materialRaisedButton1.Text = "Bearbeiten";
+                    }
+                }
+            }
         }
 
         //Dragable machen
@@ -239,7 +312,26 @@ namespace Kalender
                 {
                     int vonInMin = (Convert.ToInt32(txtVon.Text.Substring(0, 2).ToString()) * 60) + (Convert.ToInt32(txtVon.Text.Substring(3, 2).ToString()));
                     int bisInMin = (Convert.ToInt32(txtBis.Text.Substring(0, 2).ToString()) * 60) + (Convert.ToInt32(txtBis.Text.Substring(3, 2).ToString()));
-                    f1.arrTermine.Add(new Termin(txtTitel.Text, txtNotizen.Text, jahr, monat, tag, false, vonInMin, bisInMin));
+                    if (edit)
+                    {
+                        for (int i = 0; i < f1.arrTermine.Count; i++)
+                        {
+                            if (f1.arrTermine[i].TerID == id)
+                            {
+                                Termin t = f1.arrTermine[i];
+
+                                t.TerNname = txtTitel.Text;
+                                t.TerBeschreibung = txtNotizen.Text;
+                                t.TerGanztaegig = false;
+                                t.VonInMin = vonInMin;
+                                t.BisInMin = bisInMin;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        f1.arrTermine.Add(new Termin(txtTitel.Text, txtNotizen.Text, jahr, monat, tag, false, vonInMin, bisInMin));
+                    }
                     try
                     {
                         FileStream fs = new FileStream(Application.StartupPath + "\\Termine.xml", FileMode.Create, FileAccess.Write, FileShare.None);
@@ -250,11 +342,31 @@ namespace Kalender
                     {
                         MessageBox.Show(ex.Message);
                     }
-
+                    
                     this.Close();
                 } else if (GanzTag == true)
                 {
-                    f1.arrTermine.Add(new Termin(txtTitel.Text, txtNotizen.Text, jahr, monat, tag, true, 0, 0));
+                    if (edit)
+                    {
+                        for (int i = 0; i < f1.arrTermine.Count; i++)
+                        {
+                            if (f1.arrTermine[i].TerID == id)
+                            {
+                                Termin t = f1.arrTermine[i];
+
+                                t.TerNname = txtTitel.Text;
+                                t.TerBeschreibung = txtNotizen.Text;
+                                t.TerGanztaegig = true;
+                                t.VonInMin = 0;
+                                t.BisInMin = 0;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        f1.arrTermine.Add(new Termin(txtTitel.Text, txtNotizen.Text, jahr, monat, tag, true, 0, 0));
+                    }
+                    
                     try
                     {
                         FileStream fs = new FileStream(Application.StartupPath + "\\Termine.xml", FileMode.Create, FileAccess.Write, FileShare.None);
