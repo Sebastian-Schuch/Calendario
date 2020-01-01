@@ -214,6 +214,7 @@
             this.ListViewTag.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F);
             this.ListViewTag.ForeColor = System.Drawing.Color.White;
             this.ListViewTag.FullRowSelect = true;
+            this.ListViewTag.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.ListViewTag.HideSelection = false;
             this.ListViewTag.Location = new System.Drawing.Point(197, 135);
             this.ListViewTag.MultiSelect = false;
@@ -224,6 +225,7 @@
             this.ListViewTag.TabIndex = 30;
             this.ListViewTag.UseCompatibleStateImageBehavior = false;
             this.ListViewTag.View = System.Windows.Forms.View.Details;
+            this.ListViewTag.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.ListViewTag_ColumnWidthChanging);
             // 
             // columnHeader4
             // 

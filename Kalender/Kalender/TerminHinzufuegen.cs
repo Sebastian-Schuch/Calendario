@@ -110,6 +110,7 @@ namespace Kalender
             
             if (txtVonString.Length == 5 && txtVonString[2].ToString().Equals(":"))
             {
+                if(Convert.ToInt32(txtVonString.Substring(0,2))>=0&& Convert.ToInt32(txtVonString.Substring(0, 2))<=23 && Convert.ToInt32(txtVonString.Substring(3, 2))>=0 && Convert.ToInt32(txtVonString.Substring(3, 2)) <= 59) { 
                 txtVon.ForeColor = Color.White;
                 panel2.BackColor = Color.White;
                 rightDateVon = true;
@@ -117,10 +118,11 @@ namespace Kalender
                 VonZahlinMin = (Convert.ToInt32(txtVon.Text.Substring(0, 2).ToString()) * 60) + (Convert.ToInt32(txtVon.Text.Substring(3, 2).ToString()));
 
                 return;
+                }
             }
             try
             {
-                if(Convert.ToInt32(txtVonString)>=0 && Convert.ToInt32(txtVonString) <= 24)
+                if(Convert.ToInt32(txtVonString)>=0 && Convert.ToInt32(txtVonString) <= 23)
                 {
                     if(Convert.ToInt32(txtVonString)>=0&& Convert.ToInt32(txtVonString) <= 9)
                     {

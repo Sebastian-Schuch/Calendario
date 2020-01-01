@@ -137,7 +137,7 @@
             this.txtTitel.Location = new System.Drawing.Point(15, 72);
             this.txtTitel.Name = "txtTitel";
             this.txtTitel.Size = new System.Drawing.Size(251, 18);
-            this.txtTitel.TabIndex = 2;
+            this.txtTitel.TabIndex = 0;
             // 
             // panel1
             // 
@@ -217,7 +217,7 @@
             this.txtVon.MaxLength = 5;
             this.txtVon.Name = "txtVon";
             this.txtVon.Size = new System.Drawing.Size(84, 18);
-            this.txtVon.TabIndex = 9;
+            this.txtVon.TabIndex = 2;
             this.txtVon.Leave += new System.EventHandler(this.TxtVon_Leave);
             // 
             // panel3
@@ -235,9 +235,10 @@
             this.txtBis.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtBis.ForeColor = System.Drawing.Color.White;
             this.txtBis.Location = new System.Drawing.Point(179, 211);
+            this.txtBis.MaxLength = 5;
             this.txtBis.Name = "txtBis";
             this.txtBis.Size = new System.Drawing.Size(84, 18);
-            this.txtBis.TabIndex = 11;
+            this.txtBis.TabIndex = 3;
             this.txtBis.Leave += new System.EventHandler(this.TxtBis_Leave);
             // 
             // lblNotizen
@@ -259,7 +260,7 @@
             this.txtNotizen.Multiline = true;
             this.txtNotizen.Name = "txtNotizen";
             this.txtNotizen.Size = new System.Drawing.Size(245, 118);
-            this.txtNotizen.TabIndex = 14;
+            this.txtNotizen.TabIndex = 4;
             // 
             // materialRaisedButton1
             // 
@@ -269,7 +270,7 @@
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
             this.materialRaisedButton1.Size = new System.Drawing.Size(245, 40);
-            this.materialRaisedButton1.TabIndex = 15;
+            this.materialRaisedButton1.TabIndex = 5;
             this.materialRaisedButton1.Text = "Hinzufügen";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
             this.materialRaisedButton1.Click += new System.EventHandler(this.MaterialRaisedButton1_Click);

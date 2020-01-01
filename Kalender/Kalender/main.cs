@@ -305,6 +305,12 @@ namespace Kalender
 
         }
 
+        private void ListViewTag_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        {
+            e.NewWidth = this.ListViewTag.Columns[e.ColumnIndex].Width;
+            e.Cancel = true;
+        }
+
         internal void TagRefresh(int jahr, int monat, int tag)
         {
             tempListe.Clear();
