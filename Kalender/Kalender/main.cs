@@ -67,7 +67,9 @@ namespace Kalender
             else if (tab.Equals("suche"))
             {
                 tabControlMain.SelectedTab = tabSuche;
+                txtSuche.Focus();
             }
+
             this.Update();
 
         }
@@ -254,9 +256,7 @@ namespace Kalender
 
         private void Label2_Click(object sender, EventArgs e)
         {
-            TerminHinzufuegen th = new TerminHinzufuegen(selectedJahr, selectedMonat, selectedTag);
-            th.f1 = frm;
-            th.ShowDialog();
+
         }
 
         internal void SuchListViewRefresh(string filter)
@@ -300,7 +300,12 @@ namespace Kalender
 
         private void BearbeitenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Notizen nt = new Notizen(tempListe[ListViewTag.FocusedItem.Index].TerBeschreibung, tempListe[ListViewTag.FocusedItem.Index].TerNname);
+                nt.ShowDialog();
+            }
+            catch { }
         }
 
         private void ListViewTag_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
@@ -351,6 +356,14 @@ namespace Kalender
 
             }
             catch { }
+        }
+
+        private void MaterialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            TerminHinzufuegen th = new TerminHinzufuegen(selectedJahr, selectedMonat, selectedTag);
+            th.f1 = frm;
+            th.ShowDialog();
+            TagRefresh(selectedJahr, selectedMonat, selectedTag);
         }
 
         internal void TagRefresh(int jahr, int monat, int tag)

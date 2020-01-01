@@ -32,8 +32,6 @@
             this.panHeader = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.sideNav = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panUnterNav = new System.Windows.Forms.Panel();
             this.panSuche = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,7 +42,6 @@
             this.panTag = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pbSideMenu1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -60,7 +57,6 @@
             this.panWoche.SuspendLayout();
             this.panTag.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSideMenu1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -99,10 +95,7 @@
             // 
             // sideNav
             // 
-            this.sideNav.Controls.Add(this.button2);
-            this.sideNav.Controls.Add(this.button1);
             this.sideNav.Controls.Add(this.panUnterNav);
-            this.sideNav.Controls.Add(this.pictureBox2);
             this.sideNav.Controls.Add(this.panSuche);
             this.sideNav.Controls.Add(this.panMonat);
             this.sideNav.Controls.Add(this.panWoche);
@@ -112,26 +105,6 @@
             this.sideNav.Name = "sideNav";
             this.sideNav.Size = new System.Drawing.Size(263, 761);
             this.sideNav.TabIndex = 2;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(46, 554);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Suchliste Refresh (Debug)";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(46, 525);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Output Terminliste (Debug)";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // panUnterNav
             // 
@@ -162,6 +135,7 @@
             this.label6.Size = new System.Drawing.Size(63, 25);
             this.label6.TabIndex = 7;
             this.label6.Text = "Suche";
+            this.label6.Click += new System.EventHandler(this.Label6_Click);
             // 
             // panMonat
             // 
@@ -184,6 +158,7 @@
             this.label5.Size = new System.Drawing.Size(68, 25);
             this.label5.TabIndex = 5;
             this.label5.Text = "Monat";
+            this.label5.Click += new System.EventHandler(this.Label5_Click);
             // 
             // panWoche
             // 
@@ -206,6 +181,7 @@
             this.label4.Size = new System.Drawing.Size(72, 25);
             this.label4.TabIndex = 5;
             this.label4.Text = "Woche";
+            this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // panTag
             // 
@@ -228,6 +204,7 @@
             this.label3.Size = new System.Drawing.Size(45, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Tag";
+            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // pbSideMenu1
             // 
@@ -242,18 +219,6 @@
             this.pbSideMenu1.TabIndex = 0;
             this.pbSideMenu1.TabStop = false;
             this.pbSideMenu1.Click += new System.EventHandler(this.pbSideMenu1_Click_1);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Kalender.Properties.Resources.user;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 714);
-            this.pictureBox2.MaximumSize = new System.Drawing.Size(32, 32);
-            this.pictureBox2.MinimumSize = new System.Drawing.Size(20, 20);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
             // 
             // pictureBox7
             // 
@@ -371,7 +336,6 @@
             this.panTag.ResumeLayout(false);
             this.panTag.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSideMenu1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -386,7 +350,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panHeader;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pbSideMenu1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pbExit;
@@ -406,8 +369,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panUnterNav;
         private System.Windows.Forms.PictureBox MinimizeBtn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }
 

@@ -41,7 +41,6 @@
             this.bearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bearbeitenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblTag = new System.Windows.Forms.Label();
             this.tabWoche = new System.Windows.Forms.TabPage();
@@ -141,6 +140,8 @@
             this.pbwJahrzurueck = new System.Windows.Forms.PictureBox();
             this.pbwJahrVorwaerts = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControlMain.SuspendLayout();
             this.tabTag.SuspendLayout();
             this.strip.SuspendLayout();
@@ -177,8 +178,8 @@
             // tabTag
             // 
             this.tabTag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.tabTag.Controls.Add(this.materialRaisedButton1);
             this.tabTag.Controls.Add(this.ListViewTag);
-            this.tabTag.Controls.Add(this.label2);
             this.tabTag.Controls.Add(this.panel3);
             this.tabTag.Location = new System.Drawing.Point(4, 22);
             this.tabTag.Name = "tabTag";
@@ -273,18 +274,6 @@
             this.löschenToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.löschenToolStripMenuItem.Text = "Löschen";
             this.löschenToolStripMenuItem.Click += new System.EventHandler(this.LöschenToolStripMenuItem_Click);
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(372, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(262, 24);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "+ Termin hinzufügen";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // panel3
             // 
@@ -1423,6 +1412,7 @@
             // tabSuche
             // 
             this.tabSuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.tabSuche.Controls.Add(this.label1);
             this.tabSuche.Controls.Add(this.panel2);
             this.tabSuche.Controls.Add(this.txtSuche);
             this.tabSuche.Controls.Add(this.LVsuche);
@@ -1593,6 +1583,32 @@
             this.panel1.Size = new System.Drawing.Size(1016, 43);
             this.panel1.TabIndex = 26;
             // 
+            // materialRaisedButton1
+            // 
+            this.materialRaisedButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialRaisedButton1.Location = new System.Drawing.Point(366, 60);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(263, 41);
+            this.materialRaisedButton1.TabIndex = 31;
+            this.materialRaisedButton1.Text = "Termin hinzufügen";
+            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.MaterialRaisedButton1_Click);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(445, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 24);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Suche";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1722,7 +1738,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblTag;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView ListViewTag;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
@@ -1738,5 +1753,7 @@
         private System.Windows.Forms.PictureBox pbwJahrzurueck;
         private System.Windows.Forms.Label lblmJahr;
         private System.Windows.Forms.Label lblwMonat;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private System.Windows.Forms.Label label1;
     }
 }

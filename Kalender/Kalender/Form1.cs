@@ -243,21 +243,49 @@ namespace Kalender
         private void PictureBox7_Click(object sender, EventArgs e)
         {
             frmain.ChangeTab("suche");
+            minimizeNav();
         }
 
         private void PictureBox6_Click(object sender, EventArgs e)
         {
             frmain.ChangeTab("monat");
+            minimizeNav();
         }
 
         private void PictureBox5_Click(object sender, EventArgs e)
         {
             frmain.ChangeTab("woche");
+            minimizeNav();
         }
 
         private void PictureBox4_Click(object sender, EventArgs e)
         {
             frmain.ChangeTab("tag");
+            minimizeNav();
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+            frmain.ChangeTab("tag");
+            minimizeNav();
+        }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+            frmain.ChangeTab("woche");
+            minimizeNav();
+        }
+
+        private void Label5_Click(object sender, EventArgs e)
+        {
+            frmain.ChangeTab("monat");
+            minimizeNav();
+        }
+
+        private void Label6_Click(object sender, EventArgs e)
+        {
+            frmain.ChangeTab("suche");
+            minimizeNav();
         }
     }
 
