@@ -151,5 +151,20 @@
   <ItemGroup>
     <None Include="bilder\right-arrow.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bilder\Monatsuebersicht.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bilder\Tagesübersicht.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bilder\terminuebersicht.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bilder\Wochenuebersicht.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bilder\search.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
