@@ -280,7 +280,7 @@ namespace Kalender
                 LVsuche.Items.Clear();
                 foreach (Termin t in frm.arrTermine)
                 {
-                    if (t.TerNname.StartsWith(filter))
+                    if (t.TerNname.ToLower().StartsWith(filter.ToLower()))
                     {
 
                    
