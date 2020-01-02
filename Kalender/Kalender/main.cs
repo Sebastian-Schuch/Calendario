@@ -231,7 +231,6 @@ namespace Kalender
                 btn.Visible = true;
             }
 
-            //MessageBox.Show(wochentag.ToString());
             if (wochentag == 0)
             {
                 wochentag = 7;
@@ -273,7 +272,6 @@ namespace Kalender
                 btn.Visible = true;
             }
 
-            //MessageBox.Show(wochentag.ToString());
             if (wochentag == 0)
             {
                 wochentag = 7;
