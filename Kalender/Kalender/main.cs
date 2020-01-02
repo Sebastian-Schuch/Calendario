@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
-using System.IO;
 namespace Kalender
 {
     public partial class main : Form
@@ -23,7 +23,12 @@ namespace Kalender
         private void main_Load(object sender, EventArgs e)
         {
             design();
+            lblJahr.Text = DateTime.Today.Year.ToString();
+            lblwJahr.Text = DateTime.Today.Year.ToString();
+            lblwMonat.Text = DateTime.Today.Month.ToString();
+
             datumAufButtons();
+            datumAufButtonsWoche();
             farblichHinterlegen("lbl" + selectedMonat.ToString());
             SuchListViewRefresh("");
             AddClickEventToButtons();
@@ -215,7 +220,7 @@ namespace Kalender
 
         private void datumAufButtons()
         {
-            
+
             tageAnzahlMonat = Convert.ToInt32(DateTime.DaysInMonth(selectedJahr, selectedMonat));
             DateTime datum = new DateTime(selectedJahr, selectedMonat, 1);
             wochentag = Convert.ToInt16(datum.DayOfWeek);
@@ -254,6 +259,174 @@ namespace Kalender
             }
         }
 
+        private int start1;
+        private int datumsTag;
+        private void datumAufButtonsWoche()
+        {
+
+            tageAnzahlMonat = Convert.ToInt32(DateTime.DaysInMonth(selectedJahr, selectedMonat));
+            DateTime datum = new DateTime(selectedJahr, selectedMonat, 1);
+            wochentag = Convert.ToInt16(datum.DayOfWeek);
+
+            for (int i = 1; i <= 7; i++)
+            {
+                Button btn = this.Controls.Find("btnm" + i.ToString(), true).FirstOrDefault() as Button;
+                btn.Visible = true;
+            }
+
+            //MessageBox.Show(wochentag.ToString());
+            if (wochentag == 0)
+            {
+                wochentag = 7;
+            }
+
+            for (int i = 1; i < wochentag; i++)
+            {
+                Button btn = this.Controls.Find("btnm" + i.ToString(), true).FirstOrDefault() as Button;
+                btn.Visible = false;
+            }
+
+            start1 = wochentag;
+            datumsTag = 1;
+            for (int b = 1; b <= 8 - wochentag; b++)
+            {
+
+                Button btn = this.Controls.Find("btnm" + start1.ToString(), true).FirstOrDefault() as Button;
+                btn.Text = b.ToString();
+                start1++;
+                datumsTag++;
+            }
+
+        }
+
+        private void datumAufButtonsWocheRueckwaerts()
+        {
+            tageAnzahlMonat = Convert.ToInt32(DateTime.DaysInMonth(selectedJahr, selectedMonat));
+            DateTime datum = new DateTime(selectedJahr, selectedMonat, 1);
+            wochentag = Convert.ToInt16(datum.DayOfWeek);
+
+            for (int i = 1; i <= 7; i++)
+            {
+                Button btn = this.Controls.Find("btnm" + i.ToString(), true).FirstOrDefault() as Button;
+                btn.Visible = true;
+            }
+
+            if (wochentag == 0)
+            {
+                wochentag = 7;
+            }
+
+            int zahl = (wochentag - 1) + tageAnzahlMonat;
+            int begin = zahl % 7;
+
+            for (int i = 7; i > begin; i--)
+            {
+                Button btn = this.Controls.Find("btnm" + i.ToString(), true).FirstOrDefault() as Button;
+                btn.Visible = false;
+            }
+
+            for (int b = begin; b >= 1; b--)
+            {
+
+                Button btn = this.Controls.Find("btnm" + b.ToString(), true).FirstOrDefault() as Button;
+                btn.Text = tageAnzahlMonat.ToString();
+                tageAnzahlMonat--;
+
+            }
+        }
+
+        private void pbWochePlus_Click(object sender, EventArgs e)
+        {
+
+            if (datumsTag > tageAnzahlMonat)
+            {
+                start1 = 1;
+                if (selectedMonat == 12)
+                {
+                    selectedMonat = 1;
+                }
+                else
+                {
+                    selectedMonat++;
+                }
+                lblwMonat.Text = selectedMonat.ToString();
+                datumAufButtonsWoche();
+            }
+            else
+            {
+                for (int i = 1; i <= 7; i++)
+                {
+                    Button btn1 = this.Controls.Find("btnm" + i.ToString(), true).FirstOrDefault() as Button;
+                    btn1.Visible = true;
+
+                }
+
+                for (int b = 1; b <= 7; b++)
+                {
+                    if (datumsTag > tageAnzahlMonat)
+                    {
+                        Button btn1 = this.Controls.Find("btnm" + b.ToString(), true).FirstOrDefault() as Button;
+                        btn1.Visible = false;
+                        datumsTag++;
+                    }
+                    else
+                    {
+                        Button btn = this.Controls.Find("btnm" + b.ToString(), true).FirstOrDefault() as Button;
+                        btn.Text = datumsTag.ToString();
+                        datumsTag++;
+
+                    }
+                }
+            }
+        }
+        private void pbWocheMinus_Click(object sender, EventArgs e)
+        {
+
+            int tagletzte = Convert.ToInt16(btnm1.Text) - 1;
+
+            if (btnm1.Visible = false || tagletzte < 1)
+            {
+                if (selectedMonat == 1)
+                {
+                    selectedMonat = 12;
+                    selectedJahr--;
+                }
+                else
+                {
+                    selectedMonat--;
+                }
+                datumAufButtonsWocheRueckwaerts();
+                lblwMonat.Text = selectedMonat.ToString();
+
+            }
+            else
+            {
+                for (int i = 1; i <= 7; i++)
+                {
+                    Button btn1 = this.Controls.Find("btnm" + i.ToString(), true).FirstOrDefault() as Button;
+                    btn1.Visible = true;
+
+                }
+
+                for (int b = 1; b <= 7; b++)
+                {
+                    if (tagletzte < 1)
+                    {
+                        Button btn1 = this.Controls.Find("btnm" + (8 - b).ToString(), true).FirstOrDefault() as Button;
+                        btn1.Visible = false;
+                        tagletzte--;
+                    }
+                    else
+                    {
+                        Button btn = this.Controls.Find("btnm" + (8 - b).ToString(), true).FirstOrDefault() as Button;
+                        btn.Text = tagletzte.ToString();
+                        tagletzte--;
+
+                    }
+                }
+            }
+        }
+
         private void Label2_Click(object sender, EventArgs e)
         {
 
@@ -283,20 +456,19 @@ namespace Kalender
                     if (t.TerNname.StartsWith(filter))
                     {
 
-                   
-                    lsItem = new ListViewItem("");
-                    lsItem.SubItems.Add(t.TerNname);
-                    lsItem.SubItems.Add(t.ToString());
 
-                    LVsuche.Items.Add(lsItem);
+                        lsItem = new ListViewItem("");
+                        lsItem.SubItems.Add(t.TerNname);
+                        lsItem.SubItems.Add(t.ToString());
+
+                        LVsuche.Items.Add(lsItem);
                     }
                 }
             }
 
         }
 
-
-        List<Termin> tempListe = new List<Termin>();
+        private List<Termin> tempListe = new List<Termin>();
 
         private void BearbeitenToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -316,7 +488,8 @@ namespace Kalender
 
         private void BearbeitenToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 int iD = tempListe[ListViewTag.FocusedItem.Index].TerID;
                 TerminHinzufuegen th = new TerminHinzufuegen(true, iD);
                 th.f1 = frm;
@@ -334,8 +507,8 @@ namespace Kalender
             try
             {
                 int iD = tempListe[ListViewTag.FocusedItem.Index].TerID;
-                
-                for(int i = 0; i < frm.arrTermine.Count; i++)
+
+                for (int i = 0; i < frm.arrTermine.Count; i++)
                 {
                     if (frm.arrTermine[i].TerID == iD)
                     {
@@ -365,6 +538,8 @@ namespace Kalender
             th.ShowDialog();
             TagRefresh(selectedJahr, selectedMonat, selectedTag);
         }
+
+
 
         internal void TagRefresh(int jahr, int monat, int tag)
         {
@@ -398,7 +573,7 @@ namespace Kalender
                     int stunden = t.VonInMin / 60;
                     int minuten = t.VonInMin % 60;
                     string uhrzeit;
-                    if(stunden < 10)
+                    if (stunden < 10)
                     {
                         uhrzeit = "0" + stunden;
                     }
@@ -424,7 +599,7 @@ namespace Kalender
                     }
                     else
                     {
-                        uhrzeit += " - "+stunden.ToString();
+                        uhrzeit += " - " + stunden.ToString();
                     }
                     if (minuten < 10)
                     {
@@ -447,16 +622,16 @@ namespace Kalender
                     {
                         lsItem.SubItems.Add("\u2610");
                     }
-                    
+
                     ListViewTag.Items.Add(lsItem);
-                    
+
 
 
                 }
             }
             lblTag.Text = tag + "." + monat + "." + jahr;
 
-            
+
 
 
         }
