@@ -126,8 +126,6 @@
             this.btnm1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMonatText = new System.Windows.Forms.Label();
-            this.pbwJahrVorwaerts = new System.Windows.Forms.PictureBox();
-            this.pbwJahrzurueck = new System.Windows.Forms.PictureBox();
             this.lblwJahr = new System.Windows.Forms.Label();
             this.lblwMonat = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -161,8 +159,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbWocheMinus)).BeginInit();
             this.tlpWoche.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrVorwaerts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrzurueck)).BeginInit();
             this.tabSuche.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1429,8 +1425,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.panel1.Controls.Add(this.lblMonatText);
-            this.panel1.Controls.Add(this.pbwJahrVorwaerts);
-            this.panel1.Controls.Add(this.pbwJahrzurueck);
             this.panel1.Controls.Add(this.lblwJahr);
             this.panel1.Controls.Add(this.lblwMonat);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
@@ -1449,26 +1443,6 @@
             this.lblMonatText.TabIndex = 15;
             this.lblMonatText.Text = "Monat";
             this.lblMonatText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pbwJahrVorwaerts
-            // 
-            this.pbwJahrVorwaerts.Image = global::Kalender.Properties.Resources.right_arrow;
-            this.pbwJahrVorwaerts.Location = new System.Drawing.Point(938, 11);
-            this.pbwJahrVorwaerts.Name = "pbwJahrVorwaerts";
-            this.pbwJahrVorwaerts.Size = new System.Drawing.Size(20, 20);
-            this.pbwJahrVorwaerts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbwJahrVorwaerts.TabIndex = 14;
-            this.pbwJahrVorwaerts.TabStop = false;
-            // 
-            // pbwJahrzurueck
-            // 
-            this.pbwJahrzurueck.Image = global::Kalender.Properties.Resources.back;
-            this.pbwJahrzurueck.Location = new System.Drawing.Point(864, 11);
-            this.pbwJahrzurueck.Name = "pbwJahrzurueck";
-            this.pbwJahrzurueck.Size = new System.Drawing.Size(20, 20);
-            this.pbwJahrzurueck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbwJahrzurueck.TabIndex = 13;
-            this.pbwJahrzurueck.TabStop = false;
             // 
             // lblwJahr
             // 
@@ -1681,8 +1655,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbWocheMinus)).EndInit();
             this.tlpWoche.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrVorwaerts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbwJahrzurueck)).EndInit();
             this.tabSuche.ResumeLayout(false);
             this.tabSuche.PerformLayout();
             this.ResumeLayout(false);
@@ -1797,8 +1769,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pbwJahrVorwaerts;
-        private System.Windows.Forms.PictureBox pbwJahrzurueck;
         private System.Windows.Forms.Label lblwJahr;
         private System.Windows.Forms.Label lblwMonat;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
