@@ -546,7 +546,11 @@ namespace Kalender
             TagRefresh(selectedJahr, selectedMonat, selectedTag);
         }
 
-
+        private void lblwMonat_TextChanged(object sender, EventArgs e)
+        {
+            string monatsName = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(Convert.ToInt32(lblwMonat.Text));
+            lblMonatText.Text = monatsName.ToString();
+        }
 
         internal void TagRefresh(int jahr, int monat, int tag)
         {
