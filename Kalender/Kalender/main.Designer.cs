@@ -110,8 +110,6 @@
             this.bearbeitenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTag = new System.Windows.Forms.Label();
             this.tabWoche = new System.Windows.Forms.TabPage();
             this.pbWochePlus = new System.Windows.Forms.PictureBox();
@@ -145,6 +143,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblNoTermin = new System.Windows.Forms.Label();
             this.tabControlMain.SuspendLayout();
             this.tabMonat.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -154,8 +153,6 @@
             this.tabTag.SuspendLayout();
             this.strip.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabWoche.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbWochePlus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbWocheMinus)).BeginInit();
@@ -1104,6 +1101,7 @@
             // tabTag
             // 
             this.tabTag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.tabTag.Controls.Add(this.lblNoTermin);
             this.tabTag.Controls.Add(this.materialRaisedButton1);
             this.tabTag.Controls.Add(this.ListViewTag);
             this.tabTag.Controls.Add(this.panel3);
@@ -1219,35 +1217,11 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.lblTag);
             this.panel3.Location = new System.Drawing.Point(-4, 1);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1016, 43);
             this.panel3.TabIndex = 27;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
-            this.pictureBox1.Image = global::Kalender.Properties.Resources.right_arrow;
-            this.pictureBox1.Location = new System.Drawing.Point(556, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.No;
-            this.pictureBox2.Image = global::Kalender.Properties.Resources.back;
-            this.pictureBox2.Location = new System.Drawing.Point(433, 13);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
             // 
             // lblTag
             // 
@@ -1655,6 +1629,18 @@
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader2.Width = 300;
             // 
+            // lblNoTermin
+            // 
+            this.lblNoTermin.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoTermin.ForeColor = System.Drawing.Color.White;
+            this.lblNoTermin.Location = new System.Drawing.Point(249, 351);
+            this.lblNoTermin.Name = "lblNoTermin";
+            this.lblNoTermin.Size = new System.Drawing.Size(515, 24);
+            this.lblNoTermin.TabIndex = 32;
+            this.lblNoTermin.Text = "Es sieht so aus, als gäbe es noch keine Termine...";
+            this.lblNoTermin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNoTermin.Visible = false;
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1674,8 +1660,6 @@
             this.tabTag.ResumeLayout(false);
             this.strip.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabWoche.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbWochePlus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbWocheMinus)).EndInit();
@@ -1783,8 +1767,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtSuche;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblTag;
         private System.Windows.Forms.ListView ListViewTag;
         private System.Windows.Forms.ColumnHeader columnHeader4;
@@ -1806,5 +1788,6 @@
         private System.Windows.Forms.PictureBox pbWochePlus;
         private System.Windows.Forms.PictureBox pbWocheMinus;
         private System.Windows.Forms.Label lblMonatText;
+        private System.Windows.Forms.Label lblNoTermin;
     }
 }

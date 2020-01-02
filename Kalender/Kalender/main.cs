@@ -559,6 +559,7 @@ namespace Kalender
 
             ListViewItem lsItem;
             ListViewTag.Items.Clear();
+            
             foreach (Termin t in frm.arrTermine)
             {
                 if (t.Jahr == jahr && t.Monat == monat && t.Tag == tag)
@@ -637,6 +638,16 @@ namespace Kalender
 
 
                 }
+            }
+            if(tempListe.Count == 0)
+            {
+                ListViewTag.Visible = false;
+                lblNoTermin.Visible = true;
+            }
+            else
+            {
+                ListViewTag.Visible = true;
+                lblNoTermin.Visible = false;
             }
             lblTag.Text = tag + "." + monat + "." + jahr;
 
