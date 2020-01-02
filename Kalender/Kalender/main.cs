@@ -344,12 +344,15 @@ namespace Kalender
                 if (selectedMonat == 12)
                 {
                     selectedMonat = 1;
+                    selectedJahr++;
                 }
                 else
                 {
                     selectedMonat++;
                 }
                 lblwMonat.Text = selectedMonat.ToString();
+                lblwJahr.Text = selectedMonat.ToString();
+
                 datumAufButtonsWoche();
             }
             else
@@ -384,7 +387,7 @@ namespace Kalender
 
             int tagletzte = Convert.ToInt16(btnm1.Text) - 1;
 
-            if (btnm1.Visible = false || tagletzte < 1)
+            if (btnm1.Visible == false || Convert.ToInt32(btnm1.Text) == 1)
             {
                 if (selectedMonat == 1)
                 {
@@ -395,10 +398,12 @@ namespace Kalender
                 {
                     selectedMonat--;
                 }
-                datumAufButtonsWocheRueckwaerts();
                 lblwMonat.Text = selectedMonat.ToString();
-
+                lblwJahr.Text = selectedJahr.ToString();
+                datumAufButtonsWocheRueckwaerts();
             }
+
+
             else
             {
                 for (int i = 1; i <= 7; i++)
@@ -426,6 +431,7 @@ namespace Kalender
                 }
             }
         }
+
 
         private void Label2_Click(object sender, EventArgs e)
         {
@@ -559,7 +565,7 @@ namespace Kalender
                     /*tblLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
                     tblLayout.Controls.Add(new Label() { Text = t.TerNname }, 0, tblLayout.RowCount - 1);
                     tblLayout.Controls.Add(new Label() { Text = t.Tag+"."+t.Monat+"."+t.Jahr }, 1, tblLayout.RowCount - 1);
-                    
+
                     Button edit = new Button();
                     edit.Text = "Bearbeiten";
                     edit.Click += (sender, args) => EditTermin(t.TerID);
