@@ -114,6 +114,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTag = new System.Windows.Forms.Label();
             this.tabWoche = new System.Windows.Forms.TabPage();
+            this.pbWochePlus = new System.Windows.Forms.PictureBox();
+            this.pbWocheMinus = new System.Windows.Forms.PictureBox();
             this.tlpWoche = new System.Windows.Forms.TableLayoutPanel();
             this.btnm2 = new System.Windows.Forms.Button();
             this.btnm7 = new System.Windows.Forms.Button();
@@ -123,6 +125,7 @@
             this.btnm3 = new System.Windows.Forms.Button();
             this.btnm1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblMonatText = new System.Windows.Forms.Label();
             this.pbwJahrVorwaerts = new System.Windows.Forms.PictureBox();
             this.pbwJahrzurueck = new System.Windows.Forms.PictureBox();
             this.lblwJahr = new System.Windows.Forms.Label();
@@ -142,8 +145,6 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.pbWochePlus = new System.Windows.Forms.PictureBox();
-            this.pbWocheMinus = new System.Windows.Forms.PictureBox();
             this.tabControlMain.SuspendLayout();
             this.tabMonat.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -156,13 +157,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabWoche.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWochePlus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWocheMinus)).BeginInit();
             this.tlpWoche.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbwJahrVorwaerts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbwJahrzurueck)).BeginInit();
             this.tabSuche.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbWochePlus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbWocheMinus)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -249,6 +250,7 @@
             this.tableLayoutPanel1.Controls.Add(this.button40, 4, 5);
             this.tableLayoutPanel1.Controls.Add(this.button41, 5, 5);
             this.tableLayoutPanel1.Controls.Add(this.button42, 6, 5);
+            this.tableLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(191, 150);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
@@ -1279,6 +1281,30 @@
             this.tabWoche.TabIndex = 2;
             this.tabWoche.Text = "Woche";
             // 
+            // pbWochePlus
+            // 
+            this.pbWochePlus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbWochePlus.Image = global::Kalender.Properties.Resources.right_arrow;
+            this.pbWochePlus.Location = new System.Drawing.Point(894, 347);
+            this.pbWochePlus.Name = "pbWochePlus";
+            this.pbWochePlus.Size = new System.Drawing.Size(45, 45);
+            this.pbWochePlus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbWochePlus.TabIndex = 29;
+            this.pbWochePlus.TabStop = false;
+            this.pbWochePlus.Click += new System.EventHandler(this.pbWochePlus_Click);
+            // 
+            // pbWocheMinus
+            // 
+            this.pbWocheMinus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbWocheMinus.Image = global::Kalender.Properties.Resources.back;
+            this.pbWocheMinus.Location = new System.Drawing.Point(83, 347);
+            this.pbWocheMinus.Name = "pbWocheMinus";
+            this.pbWocheMinus.Size = new System.Drawing.Size(45, 45);
+            this.pbWocheMinus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbWocheMinus.TabIndex = 28;
+            this.pbWocheMinus.TabStop = false;
+            this.pbWocheMinus.Click += new System.EventHandler(this.pbWocheMinus_Click);
+            // 
             // tlpWoche
             // 
             this.tlpWoche.ColumnCount = 7;
@@ -1402,6 +1428,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.lblMonatText);
             this.panel1.Controls.Add(this.pbwJahrVorwaerts);
             this.panel1.Controls.Add(this.pbwJahrzurueck);
             this.panel1.Controls.Add(this.lblwJahr);
@@ -1410,6 +1437,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1016, 43);
             this.panel1.TabIndex = 26;
+            // 
+            // lblMonatText
+            // 
+            this.lblMonatText.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblMonatText.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonatText.ForeColor = System.Drawing.Color.White;
+            this.lblMonatText.Location = new System.Drawing.Point(397, 3);
+            this.lblMonatText.Name = "lblMonatText";
+            this.lblMonatText.Size = new System.Drawing.Size(219, 40);
+            this.lblMonatText.TabIndex = 15;
+            this.lblMonatText.Text = "Monat";
+            this.lblMonatText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pbwJahrVorwaerts
             // 
@@ -1454,6 +1493,7 @@
             this.lblwMonat.TabIndex = 0;
             this.lblwMonat.Text = "Monat";
             this.lblwMonat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblwMonat.TextChanged += new System.EventHandler(this.lblwMonat_TextChanged);
             // 
             // label21
             // 
@@ -1615,28 +1655,6 @@
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader2.Width = 300;
             // 
-            // pbWochePlus
-            // 
-            this.pbWochePlus.Image = global::Kalender.Properties.Resources.right_arrow;
-            this.pbWochePlus.Location = new System.Drawing.Point(894, 347);
-            this.pbWochePlus.Name = "pbWochePlus";
-            this.pbWochePlus.Size = new System.Drawing.Size(45, 45);
-            this.pbWochePlus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbWochePlus.TabIndex = 29;
-            this.pbWochePlus.TabStop = false;
-            this.pbWochePlus.Click += new System.EventHandler(this.pbWochePlus_Click);
-            // 
-            // pbWocheMinus
-            // 
-            this.pbWocheMinus.Image = global::Kalender.Properties.Resources.back;
-            this.pbWocheMinus.Location = new System.Drawing.Point(83, 347);
-            this.pbWocheMinus.Name = "pbWocheMinus";
-            this.pbWocheMinus.Size = new System.Drawing.Size(45, 45);
-            this.pbWocheMinus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbWocheMinus.TabIndex = 28;
-            this.pbWocheMinus.TabStop = false;
-            this.pbWocheMinus.Click += new System.EventHandler(this.pbWocheMinus_Click);
-            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1659,14 +1677,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabWoche.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbWochePlus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWocheMinus)).EndInit();
             this.tlpWoche.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbwJahrVorwaerts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbwJahrzurueck)).EndInit();
             this.tabSuche.ResumeLayout(false);
             this.tabSuche.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbWochePlus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbWocheMinus)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1787,5 +1805,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pbWochePlus;
         private System.Windows.Forms.PictureBox pbWocheMinus;
+        private System.Windows.Forms.Label lblMonatText;
     }
 }
