@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Notizen));
             this.PnlHeader = new System.Windows.Forms.Panel();
             this.lblTermin = new System.Windows.Forms.Label();
             this.MinimizeBtn = new System.Windows.Forms.PictureBox();
@@ -115,6 +116,7 @@
             this.Controls.Add(this.lblNotizen);
             this.Controls.Add(this.PnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Notizen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Notizen";

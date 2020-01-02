@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TerminHinzufuegen));
             this.PnlHeader = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.MinimizeBtn = new System.Windows.Forms.PictureBox();
+            this.pbExit = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTitel = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,13 +51,11 @@
             this.TTalarm = new System.Windows.Forms.ToolTip(this.components);
             this.pbAlarm2 = new System.Windows.Forms.PictureBox();
             this.pbAlarm1 = new System.Windows.Forms.PictureBox();
-            this.MinimizeBtn = new System.Windows.Forms.PictureBox();
-            this.pbExit = new System.Windows.Forms.PictureBox();
             this.PnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAlarm2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAlarm1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizeBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAlarm2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAlarm1)).BeginInit();
             this.SuspendLayout();
             // 
             // PnlHeader
@@ -82,6 +82,40 @@
             this.label1.Size = new System.Drawing.Size(112, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Termin hinzufügen";
+            // 
+            // MinimizeBtn
+            // 
+            this.MinimizeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MinimizeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MinimizeBtn.Image = global::Kalender.Properties.Resources.minimize;
+            this.MinimizeBtn.Location = new System.Drawing.Point(218, 3);
+            this.MinimizeBtn.MinimumSize = new System.Drawing.Size(10, 10);
+            this.MinimizeBtn.Name = "MinimizeBtn";
+            this.MinimizeBtn.Padding = new System.Windows.Forms.Padding(7);
+            this.MinimizeBtn.Size = new System.Drawing.Size(25, 25);
+            this.MinimizeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MinimizeBtn.TabIndex = 8;
+            this.MinimizeBtn.TabStop = false;
+            this.MinimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
+            this.MinimizeBtn.MouseEnter += new System.EventHandler(this.MinimizeBtn_MouseEnter);
+            this.MinimizeBtn.MouseLeave += new System.EventHandler(this.MinimizeBtn_MouseLeave);
+            // 
+            // pbExit
+            // 
+            this.pbExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbExit.Image = global::Kalender.Properties.Resources.close;
+            this.pbExit.Location = new System.Drawing.Point(250, 3);
+            this.pbExit.MinimumSize = new System.Drawing.Size(10, 10);
+            this.pbExit.Name = "pbExit";
+            this.pbExit.Padding = new System.Windows.Forms.Padding(7);
+            this.pbExit.Size = new System.Drawing.Size(25, 25);
+            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbExit.TabIndex = 7;
+            this.pbExit.TabStop = false;
+            this.pbExit.Click += new System.EventHandler(this.PbExit_Click);
+            this.pbExit.MouseEnter += new System.EventHandler(this.PbExit_MouseEnter);
+            this.pbExit.MouseLeave += new System.EventHandler(this.PbExit_MouseLeave);
             // 
             // label2
             // 
@@ -118,7 +152,7 @@
             // 
             this.chkGanz.AutoSize = true;
             this.chkGanz.Depth = 0;
-            this.chkGanz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.chkGanz.Font = new System.Drawing.Font("Roboto", 10F);
             this.chkGanz.ForeColor = System.Drawing.Color.White;
             this.chkGanz.Location = new System.Drawing.Point(237, 121);
             this.chkGanz.Margin = new System.Windows.Forms.Padding(0);
@@ -280,40 +314,6 @@
             this.TTalarm.SetToolTip(this.pbAlarm1, "Bitte verwenden Sie das Format hh:mm (bsp: 02:14)");
             this.pbAlarm1.Visible = false;
             // 
-            // MinimizeBtn
-            // 
-            this.MinimizeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.MinimizeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MinimizeBtn.Image = global::Kalender.Properties.Resources.minimize;
-            this.MinimizeBtn.Location = new System.Drawing.Point(218, 3);
-            this.MinimizeBtn.MinimumSize = new System.Drawing.Size(10, 10);
-            this.MinimizeBtn.Name = "MinimizeBtn";
-            this.MinimizeBtn.Padding = new System.Windows.Forms.Padding(7);
-            this.MinimizeBtn.Size = new System.Drawing.Size(25, 25);
-            this.MinimizeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.MinimizeBtn.TabIndex = 8;
-            this.MinimizeBtn.TabStop = false;
-            this.MinimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
-            this.MinimizeBtn.MouseEnter += new System.EventHandler(this.MinimizeBtn_MouseEnter);
-            this.MinimizeBtn.MouseLeave += new System.EventHandler(this.MinimizeBtn_MouseLeave);
-            // 
-            // pbExit
-            // 
-            this.pbExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbExit.Image = global::Kalender.Properties.Resources.close;
-            this.pbExit.Location = new System.Drawing.Point(250, 3);
-            this.pbExit.MinimumSize = new System.Drawing.Size(10, 10);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Padding = new System.Windows.Forms.Padding(7);
-            this.pbExit.Size = new System.Drawing.Size(25, 25);
-            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbExit.TabIndex = 7;
-            this.pbExit.TabStop = false;
-            this.pbExit.Click += new System.EventHandler(this.PbExit_Click);
-            this.pbExit.MouseEnter += new System.EventHandler(this.PbExit_MouseEnter);
-            this.pbExit.MouseLeave += new System.EventHandler(this.PbExit_MouseLeave);
-            // 
             // TerminHinzufuegen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,16 +338,17 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.PnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TerminHinzufuegen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TerminHinzufuegen";
             this.Load += new System.EventHandler(this.TerminHinzufuegen_Load);
             this.PnlHeader.ResumeLayout(false);
             this.PnlHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAlarm2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAlarm1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizeBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAlarm2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAlarm1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
