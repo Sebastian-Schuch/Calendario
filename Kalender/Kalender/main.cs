@@ -32,6 +32,7 @@ namespace Kalender
             farblichHinterlegen("lbl" + selectedMonat.ToString());
             SuchListViewRefresh("");
             AddClickEventToButtons();
+            AddClickEventToButtonsWoche();
             serializer = new XmlSerializer(frm.arrTermine.GetType());
             /*
             tblLayout.ColumnCount = 3;
@@ -51,6 +52,15 @@ namespace Kalender
             for (int i = 1; i <= 42; i++)
             {
                 Button btn = this.Controls.Find("button" + i.ToString(), true).FirstOrDefault() as Button;
+                btn.Click += (sender, args) => ButtonPressRefreshTag(Convert.ToInt32(btn.Text));
+            }
+        }
+
+        private void AddClickEventToButtonsWoche()
+        {
+            for (int i = 1; i <= 7; i++)
+            {
+                Button btn = this.Controls.Find("btnm" + i.ToString(), true).FirstOrDefault() as Button;
                 btn.Click += (sender, args) => ButtonPressRefreshTag(Convert.ToInt32(btn.Text));
             }
         }
