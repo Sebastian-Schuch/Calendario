@@ -550,6 +550,8 @@ namespace Kalender
             lblMonatText.Text = monatsName.ToString();
         }
 
+      
+
         internal void TagRefresh(int jahr, int monat, int tag)
         {
             tempListe.Clear();
