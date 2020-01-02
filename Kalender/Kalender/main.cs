@@ -246,7 +246,6 @@ namespace Kalender
             int start = wochentag;
             for (int b = 1; b <= tageAnzahlMonat; b++)
             {
-
                 Button btn = this.Controls.Find("button" + start.ToString(), true).FirstOrDefault() as Button;
                 btn.Text = b.ToString();
                 start++;
@@ -290,13 +289,11 @@ namespace Kalender
             datumsTag = 1;
             for (int b = 1; b <= 8 - wochentag; b++)
             {
-
                 Button btn = this.Controls.Find("btnm" + start1.ToString(), true).FirstOrDefault() as Button;
                 btn.Text = b.ToString();
                 start1++;
                 datumsTag++;
             }
-
         }
 
         private void datumAufButtonsWocheRueckwaerts()
@@ -327,20 +324,16 @@ namespace Kalender
 
             for (int b = begin; b >= 1; b--)
             {
-
                 Button btn = this.Controls.Find("btnm" + b.ToString(), true).FirstOrDefault() as Button;
                 btn.Text = tageAnzahlMonat.ToString();
                 tageAnzahlMonat--;
-
             }
         }
 
         private void pbWochePlus_Click(object sender, EventArgs e)
         {
-
-            if (datumsTag > tageAnzahlMonat)
+            if (btnm7.Visible == false || Convert.ToInt32(btnm7.Text) >= tageAnzahlMonat)
             {
-                start1 = 1;
                 if (selectedMonat == 12)
                 {
                     selectedMonat = 1;
@@ -351,8 +344,7 @@ namespace Kalender
                     selectedMonat++;
                 }
                 lblwMonat.Text = selectedMonat.ToString();
-                lblwJahr.Text = selectedMonat.ToString();
-
+                lblwJahr.Text = selectedJahr.ToString();
                 datumAufButtonsWoche();
             }
             else
@@ -363,7 +355,6 @@ namespace Kalender
                     btn1.Visible = true;
 
                 }
-
                 for (int b = 1; b <= 7; b++)
                 {
                     if (datumsTag > tageAnzahlMonat)
